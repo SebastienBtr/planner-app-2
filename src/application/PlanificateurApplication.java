@@ -18,7 +18,7 @@ public class PlanificateurApplication {
 	public static void main(String[] args) {
 		boolean quitter = false;
 		Planificateur plan = new Planificateur();
-		LinkedList<Personne> personnes = new LinkedList<>();
+		LinkedList<Personne> personnes = plan.getPersonnes();
 		EchangeurICS exch = new EchangeurICS();
 		LinkedList<Evenement> evenements = new LinkedList<>();
 		try {
@@ -102,7 +102,7 @@ public class PlanificateurApplication {
 					System.exit(0);
 					break;
 				default:
-					System.out.println("La commande n'est pas reconnu, veuillez réessayer svp.");
+					System.out.println("La commande n'est pas reconnu, veuillez rï¿½essayer svp.");
 					break;
 			}
 
@@ -134,26 +134,26 @@ public class PlanificateurApplication {
 
 	private static void disponibles(Planificateur plan,
 			LinkedList<Personne> personnes, Scanner sc) {
-		System.out.println("Veuillez choisir les personnes dont vous voulez savoir la disponibilité (Ex: 1,2,3,7,9):");
+		System.out.println("Veuillez choisir les personnes dont vous voulez savoir la disponibilitï¿½ (Ex: 1,2,3,7,9):");
 		listePersonnes(personnes);
 		String[] indicesPersonnes = sc.nextLine().split(",");
 		LinkedList<Personne> personnesATester = new LinkedList<>();
 		for (int i=0;i<indicesPersonnes.length;i++){
 			personnesATester.add(personnes.get(i));
 		}
-		System.out.println("Veuillez indiquer la date pour laquelle vous voulez savoir sa disponiblité (jj/mm/aaaa):");
+		System.out.println("Veuillez indiquer la date pour laquelle vous voulez savoir sa disponiblitï¿½ (jj/mm/aaaa):");
 		String dateString = sc.nextLine();
 		LocalDate date = LocalDate.of(Integer.parseInt(dateString.split("/")[2]),Integer.parseInt(dateString.split("/")[1]),Integer.parseInt(dateString.split("/")[0]));
-		System.out.println("Veuillez saisir l'heure de début du créneau (Exemple: 8:00) (/!\\ de 8h00 à 19h45) :");
+		System.out.println("Veuillez saisir l'heure de dï¿½but du crï¿½neau (Exemple: 8:00) (/!\\ de 8h00 ï¿½ 19h45) :");
 		String entreeHeureDebut = sc.nextLine();
 		int heure_debut = Integer.parseInt(entreeHeureDebut.split(":")[0]);
 		int min_debut = Integer.parseInt(entreeHeureDebut.split(":")[1]);
 		HashMap<String,LinkedList<Personne>> resultat = plan.getPersonnesDispo(personnesATester, date, heure_debut, min_debut);
-		System.out.println("Personnes disponibles le "+date.toString()+" à "+heure_debut+"h"+min_debut+":");
+		System.out.println("Personnes disponibles le "+date.toString()+" ï¿½ "+heure_debut+"h"+min_debut+":");
 		for (Personne p:resultat.get("disponibles")){
 			System.out.println(p.getId());
 		}
-		System.out.println("Personnes indisponibles le "+date.toString()+" à "+heure_debut+"h"+min_debut+":");
+		System.out.println("Personnes indisponibles le "+date.toString()+" ï¿½ "+heure_debut+"h"+min_debut+":");
 		for (Personne p:resultat.get("indisponibles")){
 			System.out.println(p.getId());
 		}
@@ -161,14 +161,14 @@ public class PlanificateurApplication {
 
 	private static void disponible(LinkedList<Personne> personnes, Scanner sc) {
 		int indice;
-		System.out.println("Bienvenue dans le menu de disponiblite d'une personne (uniquement pour un créneau de 15 minutes).");
-		System.out.println("Veuillez choisir l'indice de la personne dotnt vous voulez savoir la disponiblité:");
+		System.out.println("Bienvenue dans le menu de disponiblite d'une personne (uniquement pour un crï¿½neau de 15 minutes).");
+		System.out.println("Veuillez choisir l'indice de la personne dotnt vous voulez savoir la disponiblitï¿½:");
 		listePersonnes(personnes);
 		indice = Integer.parseInt(sc.nextLine());
-		System.out.println("Veuillez indiquer la date pour laquelle vous voulez savoir sa disponiblité (jj/mm/aaaa):");
+		System.out.println("Veuillez indiquer la date pour laquelle vous voulez savoir sa disponiblitï¿½ (jj/mm/aaaa):");
 		String dateString = sc.nextLine();
 		LocalDate date = LocalDate.of(Integer.parseInt(dateString.split("/")[2]),Integer.parseInt(dateString.split("/")[1]),Integer.parseInt(dateString.split("/")[0]));
-		System.out.println("Veuillez saisir l'heure de début du créneau (Exemple: 8:00) (/!\\ de 8h45 à 19h45) :");
+		System.out.println("Veuillez saisir l'heure de dï¿½but du crï¿½neau (Exemple: 8:00) (/!\\ de 8h45 ï¿½ 19h45) :");
 		String entreeHeureDebut = sc.nextLine();
 		int heure_debut = Integer.parseInt(entreeHeureDebut.split(":")[0]);
 		int min_debut = Integer.parseInt(entreeHeureDebut.split(":")[1]);
@@ -192,55 +192,55 @@ public class PlanificateurApplication {
 
 	private static void attribuerEvenement(LinkedList<Personne> personnes,
 			LinkedList<Evenement> evenements, Scanner sc) {
-		System.out.println("Bienvenue dans le menu d'attribution d'évenement à une personne.");
-		System.out.println("Veuillez choisir l'indice de la personne à laquelle vous voulez associer un évenement dans la liste ci-dessous:");
+		System.out.println("Bienvenue dans le menu d'attribution d'ï¿½venement ï¿½ une personne.");
+		System.out.println("Veuillez choisir l'indice de la personne ï¿½ laquelle vous voulez associer un ï¿½venement dans la liste ci-dessous:");
 		listePersonnes(personnes);
 		int indicePersonne = Integer.parseInt(sc.nextLine());
-		System.out.println("Veuillez choisir l'indice de l'évenementque vous voulez associer dans la liste ci-dessous:");
+		System.out.println("Veuillez choisir l'indice de l'ï¿½venementque vous voulez associer dans la liste ci-dessous:");
 		listeEvenements(evenements);
 		int indiceEvenement = Integer.parseInt(sc.nextLine());
-		System.out.println("Veuillez indiquer la date de l'évenement (jj/mm/aaaa):");
+		System.out.println("Veuillez indiquer la date de l'ï¿½venement (jj/mm/aaaa):");
 		String dateString = sc.nextLine();
 		LocalDate date = LocalDate.of(Integer.parseInt(dateString.split("/")[2]),Integer.parseInt(dateString.split("/")[1]),Integer.parseInt(dateString.split("/")[0]));
 		boolean res = personnes.get(indicePersonne).ajouterEvenement(date, evenements.get(indiceEvenement));
 		if (res){
-			System.out.println("L'évenement a bien été ajouté.");
+			System.out.println("L'ï¿½venement a bien ï¿½tï¿½ ajoutï¿½.");
 		}
 		else{
-			System.out.println("Erreur lors de l'ajout de l'évenement.");
+			System.out.println("Erreur lors de l'ajout de l'ï¿½venement.");
 		}
 	}
 
 	private static void creerEvenement(LinkedList<Evenement> evenements,
 			Scanner sc) {
-		System.out.println("Bienvenue dans le menu de création d'évenement.");
-		System.out.println("Veuillez saisir le nom de l'évenement:");
+		System.out.println("Bienvenue dans le menu de crï¿½ation d'ï¿½venement.");
+		System.out.println("Veuillez saisir le nom de l'ï¿½venement:");
 		String nomEvent = sc.nextLine();
-		System.out.println("Veuillez saisir l'heure de début du créneau (Exemple: 8:00) (/!\\ de 8h00 à 19h45) :");
+		System.out.println("Veuillez saisir l'heure de dï¿½but du crï¿½neau (Exemple: 8:00) (/!\\ de 8h00 ï¿½ 19h45) :");
 		String entreeHeureDebut = sc.nextLine();
 		int heure_debut = Integer.parseInt(entreeHeureDebut.split(":")[0]);
 		int min_debut = Integer.parseInt(entreeHeureDebut.split(":")[1]);
-		System.out.println("Veuillez saisir l'heure de fin du créneau (Exemple: 20:00) (/!\\ de 8h15 à 20h00) :");
+		System.out.println("Veuillez saisir l'heure de fin du crï¿½neau (Exemple: 20:00) (/!\\ de 8h15 ï¿½ 20h00) :");
 		String entreeHeureFin = sc.nextLine();
 		int heure_fin = Integer.parseInt(entreeHeureFin.split(":")[0]);
 		int min_fin = Integer.parseInt(entreeHeureFin.split(":")[1]);
-		System.out.println("Veuillez indiquer le niveau d'importance de l'évenement (\"A\" pour annulable, \"O\" pour obligatoire et \"I\" pour informatif):");
+		System.out.println("Veuillez indiquer le niveau d'importance de l'ï¿½venement (\"A\" pour annulable, \"O\" pour obligatoire et \"I\" pour informatif):");
 		String desc = sc.nextLine();
-		System.out.println("Veuillez indiquer une description pour l'évenement:");
+		System.out.println("Veuillez indiquer une description pour l'ï¿½venement:");
 		desc = desc+" "+sc.nextLine();
 		evenements.add(new Evenement(heure_debut,min_debut,heure_fin,min_fin, desc,nomEvent));
-		System.out.println("L'évenement "+evenements.getLast().getTitre()+" a bien été créé.");
+		System.out.println("L'ï¿½venement "+evenements.getLast().getTitre()+" a bien ï¿½tï¿½ crï¿½ï¿½.");
 	}
 
 	private static void lireICS(LinkedList<Personne> personnes,
 			EchangeurICS exch, Scanner sc) {
 		System.out.println("Bienvenue dans le menu de lecture de fichier ICS.");
-		System.out.println("Veuillez mettre votre fichier ics dans le répertoire \"fichiers\".");
+		System.out.println("Veuillez mettre votre fichier ics dans le rï¿½pertoire \"fichiers\".");
 		System.out.println("Veuillez rentrer le nom complet (Ex: ics1.ics) du fichier:");
 		String nomFichier = sc.nextLine();
 		try{
 			personnes.add(exch.lireFichierICS(new File("fichiers"+File.separator+nomFichier)));
-			System.out.println("La personne ["+personnes.getLast().getId()+"] a bien été créée.");
+			System.out.println("La personne ["+personnes.getLast().getId()+"] a bien ï¿½tï¿½ crï¿½ï¿½e.");
 
 		} catch (IOException e) {
 			System.out.println("Erreur lors de la lecture du fichier.");
@@ -248,7 +248,7 @@ public class PlanificateurApplication {
 	}
 
 	private static void creerPersonne(LinkedList<Personne> personnes, Scanner sc) {
-		System.out.println("Bienvenue dans le menu de création d'une Personne.");
+		System.out.println("Bienvenue dans le menu de crï¿½ation d'une Personne.");
 		System.out.print("Adresse mail de la Personne: ");
 		String addr = sc.nextLine();
 		System.out.print("Nom de la Personne: ");
@@ -256,20 +256,20 @@ public class PlanificateurApplication {
 		System.out.print("Prenom de la Personne: ");
 		String prenom = sc.nextLine();
 		personnes.add(new Personne(addr, nom, prenom));
-		System.out.println("La personne ["+personnes.getLast().getNom()+" "+personnes.getLast().getPrenom()+"] a bien été créée.");
+		System.out.println("La personne ["+personnes.getLast().getNom()+" "+personnes.getLast().getPrenom()+"] a bien ï¿½tï¿½ crï¿½ï¿½e.");
 	}
 
 	private static void getHelp() {
 		System.out.println("Liste des commandes:");
-		System.out.println("1 - creerPersonne: Permet de créer une personne.");
+		System.out.println("1 - creerPersonne: Permet de crï¿½er une personne.");
 		System.out.println("2 - lireICS: Permet de lire un fichier ICS.");
-		System.out.println("3 - creerEvenement: Permet de créer un évènement.");
-		System.out.println("4 - attribuerEvenement: Permet d'attribuer un évènement à une personne.");
-		System.out.println("5 - disponible: Permet de savoir la disponiblité d'une personne sur un créneau de 15 minutes.");
-		System.out.println("6 - disponibles: Permet de savoir la disponiblité de plusieurs personnes sur un créneau de 15 minutes.");
+		System.out.println("3 - creerEvenement: Permet de crï¿½er un ï¿½vï¿½nement.");
+		System.out.println("4 - attribuerEvenement: Permet d'attribuer un ï¿½vï¿½nement ï¿½ une personne.");
+		System.out.println("5 - disponible: Permet de savoir la disponiblitï¿½ d'une personne sur un crï¿½neau de 15 minutes.");
+		System.out.println("6 - disponibles: Permet de savoir la disponiblitï¿½ de plusieurs personnes sur un crï¿½neau de 15 minutes.");
 		System.out.println("7 - listePersonnes: Permet de lister l'ensemble des personnes existantes.");
 		System.out.println("8 - consulterCalendrierPersonne: Permet de consulter l'emploi du temps d'une personne.");
-		System.out.println("9 - listeEvenements: Permet de lister tous les évenement créés.");
+		System.out.println("9 - listeEvenements: Permet de lister tous les ï¿½venement crï¿½ï¿½s.");
 		System.out.println("10 - quitter: Permet de quitter l'application.");
 	}
 	

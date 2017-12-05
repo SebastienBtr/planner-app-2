@@ -1,23 +1,53 @@
 package modele;
 
+import java.io.File;
+import java.io.IOException;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.LinkedList;
 
 public class Planificateur {
 
+	private LinkedList<Personne> personnes;
+	private EchangeurICS exch;
+
+	public Planificateur() {
+	    personnes = new LinkedList<>();
+        exch = new EchangeurICS();
+
+        File calendars = new File("fichiers");
+
+        if (calendars.listFiles() != null) {
+            for (File file : calendars.listFiles()) {
+
+                try {
+                    personnes.add(exch.lireFichierICS(file));
+
+                } catch (IOException e) {
+                    System.out.println("Erreur lors de la lecture du fichier.");
+                }
+            }
+        }
+    }
+
 	/**
-	 * Cette méthode permet de récupérer les disponiblités de plusieurs personne sur un même créneau
+	 * Cette mï¿½thode permet de rï¿½cupï¿½rer les disponiblitï¿½s de plusieurs personne sur un mï¿½me crï¿½neau
 	 * @param  personnes une LinkedList de Personne
 	 * @param  date la date
-	 * @param  heure_debut l'heure du début du créneau
-	 * @param  min_debut les minutes du début du créneau
+	 * @param  heure_debut l'heure du dï¿½but du crï¿½neau
+	 * @param  min_debut les minutes du dï¿½but du crï¿½neau
 	 * @return      renvoie une hashmap avec deux champs ("disponible" et "indisponibles") qui contiennent des personnes
 	 */
-	public HashMap<String,LinkedList<Personne>> getPersonnesDispo(LinkedList<Personne> personnes,LocalDate date, int heure_debut, int min_debut){
-		HashMap<String,LinkedList<Personne>> personnesResultat = new HashMap<>();
+	public HashMap<String,LinkedList<Personne>>
+    getPersonnesDispo(LinkedList<Personne> personnes,LocalDate date, int heure_debut, int min_debut){
+
+	    HashMap<String,LinkedList<Personne>> personnesResultat = new HashMap<>();
 		LinkedList<Personne> potentiellementLibres = new LinkedList<>();
 		LinkedList<Personne> indisponibles = new LinkedList<>();
+
 		for (Personne p:personnes){
 			if (p.estLibre(date, heure_debut, min_debut)!=1){
 				potentiellementLibres.add(p);
@@ -26,8 +56,87 @@ public class Planificateur {
 				indisponibles.add(p);
 			}
 		}
+
 		personnesResultat.put("disponibles", potentiellementLibres);
 		personnesResultat.put("indisponibles", indisponibles);
 		return personnesResultat;
 	}
+
+	public ArrayList<Posibilite>
+    getPosibilite(LinkedList<Personne> personnes, int duree, LocalDateTime debutPlage, LocalDateTime finPlage ) {
+
+        if (!correctParam(personnes, duree, debutPlage, finPlage)) {
+            throw new IllegalArgumentException();
+        }
+
+        ArrayList<Posibilite> posibilites = new ArrayList<>();
+        int i = 0;
+
+        while (!debutPlage.isEqual(finPlage)) {
+
+            Posibilite newPosibilite = null;
+            int creneau = 0;
+
+            while (creneau != duree) {
+                Posibilite tmpPosibilite = new Posibilite(debutPlage,debutPlage.plusMinutes(15),
+                        getPersonnesDispo(personnes,debutPlage.toLocalDate(),debutPlage.getHour(),debutPlage.getMinute()));
+                newPosibilite = newPosibilite.concat(tmpPosibilite);
+                creneau += 15;
+            }
+
+            if (i > 0 && posibilites.get(i).estEgal(newPosibilite)) {
+                newPosibilite = posibilites.get(i).concat(newPosibilite);
+                posibilites.add(i,newPosibilite);
+            }
+            else {
+                posibilites.add(newPosibilite);
+            }
+
+            debutPlage = incrementDate(debutPlage,duree);
+            i++;
+        }
+
+        return posibilites;
+    }
+
+    private boolean correctParam(LinkedList<Personne> personnes, int duree, LocalDateTime debutPlage, LocalDateTime finPlage) {
+        //TODO verif param
+        return true;
+    }
+
+    private LocalDateTime incrementDate(LocalDateTime date, int duree) {
+        LocalTime time = LocalTime.of(20,00);
+        LocalDateTime limitTime = LocalDateTime.of(date.toLocalDate(), time);
+
+        if (date.plusMinutes(15).isAfter(limitTime)) {
+
+            LocalTime heureDebutJournee = LocalTime.of(8,00);
+            LocalDateTime newDate = LocalDateTime.of(date.toLocalDate().plusDays(1),heureDebutJournee);
+            return newDate;
+        }
+
+        return date.plusMinutes(15);
+    }
+
+	/**
+	 *
+	 * @param nomFichier
+	 */
+	public void addPersonne(String nomFichier) {
+
+        try{
+            personnes.add(exch.lireFichierICS(new File("fichiers"+File.separator+nomFichier)));
+
+        } catch (IOException e) {
+            System.out.println("Erreur lors de la lecture du fichier.");
+        }
+    }
+
+    /**
+     *
+     * @return
+     */
+    public LinkedList<Personne> getPersonnes() {
+        return personnes;
+    }
 }
