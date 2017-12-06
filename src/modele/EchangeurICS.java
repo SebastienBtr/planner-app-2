@@ -19,9 +19,9 @@ public class EchangeurICS {
 	}
 
 	/**
-	 * Cette méthode permet de lire et de parser un fichier ICS afin de créer une personne avec son calendrier
+	 * Cette mï¿½thode permet de lire et de parser un fichier ICS afin de crï¿½er une personne avec son calendrier
 	 * @param  fichier Un fichier ics
-	 * @return      renvoie la personne à qui appartient le fichier ICS
+	 * @return      renvoie la personne ï¿½ qui appartient le fichier ICS
 	 */
 	public Personne lireFichierICS(File fichier) throws IOException{
 		BufferedReader br = new BufferedReader(new FileReader(fichier));
@@ -54,7 +54,7 @@ public class EchangeurICS {
 			}
 			else if(ligne.contains("DTSTART:")){
 				String[] nbs = ligne.split("\\D+");
-				// cette regex permet de récupérer uniquement les caractères de type digital 
+				// cette regex permet de rï¿½cupï¿½rer uniquement les caractï¿½res de type digital 
 				int annee = Integer.parseInt(nbs[nbs.length-2].substring(0,4));
 				int mois = Integer.parseInt(nbs[nbs.length-2].substring(4,6));
 				int jour = Integer.parseInt(nbs[nbs.length-2].substring(6,8));
@@ -69,7 +69,7 @@ public class EchangeurICS {
 				int jour = Integer.parseInt(nbs[nbs.length-2].substring(6,8));
 				date_fin = LocalDate.of(annee, mois, jour);
 				heure_fin = Integer.parseInt(nbs[nbs.length-1].substring(0,2));
-				min_fin = Integer.parseInt(nbs[nbs.length-1].substring(0,2));
+				min_fin = Integer.parseInt(nbs[nbs.length-1].substring(2,4));
 
 			}
 			else if(ligne.contains("SUMMARY:")){
@@ -80,16 +80,15 @@ public class EchangeurICS {
 			}
 			else if (ligne.contains("END:VEVENT")){
 				long nombre_jour = ChronoUnit.DAYS.between(date_debut, date_fin);
-				for (int i=0;i<nombre_jour+1;i++){
-						p.ajouterEvenement(date_debut.plusDays(i), new Evenement(heure_debut, min_debut, heure_fin, min_fin, description, titre));
-				}
+                for (int i=0;i<nombre_jour+1;i++)
+                    p.ajouterEvenement(date_debut.plusDays(i), new Evenement(heure_debut, min_debut, heure_fin, min_fin, description, titre));
 				heure_debut =0;
 				min_debut=0;
 				heure_fin=0;
 				min_fin=0;
 				description="";
 				titre="";
-			}
+            }
 		}
 		br.close();
 		return p;

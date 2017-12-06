@@ -49,7 +49,7 @@ public class Planificateur {
 		LinkedList<Personne> indisponibles = new LinkedList<>();
 
 		for (Personne p:personnes){
-			if (p.estLibre(date, heure_debut, min_debut)!=1){
+			if (p.estLibre(date, heure_debut, min_debut)!=3){
 				potentiellementLibres.add(p);
 			}
 			else {
@@ -78,15 +78,22 @@ public class Planificateur {
             int creneau = 0;
 
             while (creneau != duree) {
+
                 Posibilite tmpPosibilite = new Posibilite(debutPlage,debutPlage.plusMinutes(15),
-                        getPersonnesDispo(personnes,debutPlage.toLocalDate(),debutPlage.getHour(),debutPlage.getMinute()));
-                newPosibilite = newPosibilite.concat(tmpPosibilite);
+                        getPersonnesDispo(personnes,debutPlage.toLocalDate(),debutPlage.plusHours((int)(debutPlage.getMinute() + creneau)/60).getHour(),debutPlage.plusMinutes(creneau).getMinute()));
+
+                if (newPosibilite != null) {
+                    newPosibilite = newPosibilite.concat(tmpPosibilite);
+                }
+                else {
+                    newPosibilite = tmpPosibilite;
+                }
                 creneau += 15;
             }
 
-            if (i > 0 && posibilites.get(i).estEgal(newPosibilite)) {
-                newPosibilite = posibilites.get(i).concat(newPosibilite);
-                posibilites.add(i,newPosibilite);
+            if (i > 0 && posibilites.get(i-1).estEgal(newPosibilite)) {
+                newPosibilite = posibilites.get(i-1).concat(newPosibilite);
+                posibilites.add(i-1,newPosibilite);
             }
             else {
                 posibilites.add(newPosibilite);
