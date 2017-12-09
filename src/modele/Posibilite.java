@@ -30,7 +30,6 @@ public class Posibilite {
             }
             else {
                 indisponibles.add(p);
-                System.out.println("------------------------------------------------------indispo");
             }
         }
 

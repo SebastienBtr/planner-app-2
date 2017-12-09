@@ -80,7 +80,7 @@ public class Planificateur {
             while (creneau != duree) {
 
                 Posibilite tmpPosibilite = new Posibilite(debutPlage,debutPlage.plusMinutes(15),
-                        getPersonnesDispo(personnes,debutPlage.toLocalDate(),debutPlage.plusHours((int)(debutPlage.getMinute() + creneau)/60).getHour(),debutPlage.plusMinutes(creneau).getMinute()));
+                        getPersonnesDispo(personnes,debutPlage.toLocalDate(),debutPlage.plusHours((int)((debutPlage.getMinute() + creneau)/60)).getHour(),debutPlage.plusMinutes(creneau).getMinute()));
 
                 if (newPosibilite != null) {
                     newPosibilite = newPosibilite.concat(tmpPosibilite);
@@ -91,9 +91,9 @@ public class Planificateur {
                 creneau += 15;
             }
 
-            if (i > 0 && posibilites.get(i-1).estEgal(newPosibilite)) {
-                newPosibilite = posibilites.get(i-1).concat(newPosibilite);
-                posibilites.add(i-1,newPosibilite);
+            if (i > 0 && posibilites.get(posibilites.size()-1).estEgal(newPosibilite)) {
+                newPosibilite = posibilites.get(posibilites.size()-1).concat(newPosibilite);
+                posibilites.set(posibilites.size()-1,newPosibilite);
             }
             else {
                 posibilites.add(newPosibilite);
