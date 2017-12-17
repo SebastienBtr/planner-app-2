@@ -1,8 +1,8 @@
-package com.github.lgooddatepicker.tableeditors;
+package LGoodDatePicker.com.github.lgooddatepicker.tableeditors;
 
-import com.github.lgooddatepicker.components.DatePicker;
-import com.github.lgooddatepicker.components.DatePickerSettings;
-import com.github.lgooddatepicker.zinternaltools.InternalUtilities;
+import LGoodDatePicker.com.github.lgooddatepicker.components.DatePicker;
+import LGoodDatePicker.com.github.lgooddatepicker.components.DatePickerSettings;
+import LGoodDatePicker.com.github.lgooddatepicker.zinternaltools.InternalUtilities;
 import java.awt.Component;
 import java.awt.event.MouseEvent;
 import java.time.LocalDate;

@@ -1,4 +1,4 @@
-package com.github.lgooddatepicker.ysandbox;
+package LGoodDatePicker.com.github.lgooddatepicker.ysandbox;
 
 import java.time.LocalDate;
 import java.time.Month;

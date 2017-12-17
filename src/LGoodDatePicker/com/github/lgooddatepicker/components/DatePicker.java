@@ -1,19 +1,19 @@
-package com.github.lgooddatepicker.components;
+package LGoodDatePicker.com.github.lgooddatepicker.components;
 
-import com.privatejgoodies.forms.layout.FormLayout;
-import com.privatejgoodies.forms.factories.CC;
+import LGoodDatePicker.com.github.lgooddatepicker.zinternaltools.*;
+import LGoodDatePicker.com.privatejgoodies.forms.layout.FormLayout;
+import LGoodDatePicker.com.privatejgoodies.forms.factories.CC;
 import java.awt.event.*;
 import javax.swing.border.*;
-import com.github.lgooddatepicker.zinternaltools.*;
-import com.github.lgooddatepicker.components.DatePickerSettings.DateArea;
-import com.github.lgooddatepicker.optionalusertools.DateChangeListener;
-import com.github.lgooddatepicker.optionalusertools.PickerUtilities;
+import LGoodDatePicker.com.github.lgooddatepicker.zinternaltools.*;
+import LGoodDatePicker.com.github.lgooddatepicker.components.DatePickerSettings.DateArea;
+import LGoodDatePicker.com.github.lgooddatepicker.optionalusertools.DateChangeListener;
+import LGoodDatePicker.com.github.lgooddatepicker.optionalusertools.PickerUtilities;
 import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
 import java.util.ArrayList;
-import com.github.lgooddatepicker.optionalusertools.DateVetoPolicy;
-import com.github.lgooddatepicker.zinternaltools.CalculateMinimumDateFieldSize;
-import com.github.lgooddatepicker.zinternaltools.CustomPopup.CustomPopupCloseListener;
+import LGoodDatePicker.com.github.lgooddatepicker.optionalusertools.DateVetoPolicy;
+import LGoodDatePicker.com.github.lgooddatepicker.zinternaltools.CustomPopup.CustomPopupCloseListener;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Insets;
@@ -70,7 +70,7 @@ public class DatePicker extends JPanel implements CustomPopupCloseListener {
     /**
      * componentListeners, This holds any component listeners for the DatePicker.
      */
-    private ArrayList<ComponentListener> componentListeners;
+    private ArrayList<LGoodDatePicker.com.github.lgooddatepicker.components.ComponentListener> componentListeners;
 
     /**
      * convert, This utility class instance is used to get or set the DatePicker java.time.LocalDate
@@ -104,7 +104,7 @@ public class DatePicker extends JPanel implements CustomPopupCloseListener {
 
     /**
      * popup, This is the custom popup instance for this date picker. This should remain null until
-     * a popup is opened. Creating a custom popup class allowed us to control the details of when
+     * a popup is opened. Creating a custom popup class allowed us to controle the details of when
      * the popup menu should be open or closed.
      */
     private CustomPopup popup = null;
@@ -490,10 +490,10 @@ public class DatePicker extends JPanel implements CustomPopupCloseListener {
         DatePicker thisDatePicker = this;
         calendarPanel = new CalendarPanel(thisDatePicker);
 
-        fireComponentEvent(new ComponentEvent(ComponentEvent.PREVIOUS_YEAR, calendarPanel.getPreviousYearButton()));
-        fireComponentEvent(new ComponentEvent(ComponentEvent.PREVIOUS_MONTH, calendarPanel.getPreviousMonthButton()));
-        fireComponentEvent(new ComponentEvent(ComponentEvent.NEXT_MONTH, calendarPanel.getNextMonthButton()));
-        fireComponentEvent(new ComponentEvent(ComponentEvent.NEXT_YEAR, calendarPanel.getNextYearButton()));
+        fireComponentEvent(new LGoodDatePicker.com.github.lgooddatepicker.components.ComponentEvent(LGoodDatePicker.com.github.lgooddatepicker.components.ComponentEvent.PREVIOUS_YEAR, calendarPanel.getPreviousYearButton()));
+        fireComponentEvent(new LGoodDatePicker.com.github.lgooddatepicker.components.ComponentEvent(LGoodDatePicker.com.github.lgooddatepicker.components.ComponentEvent.PREVIOUS_MONTH, calendarPanel.getPreviousMonthButton()));
+        fireComponentEvent(new LGoodDatePicker.com.github.lgooddatepicker.components.ComponentEvent(LGoodDatePicker.com.github.lgooddatepicker.components.ComponentEvent.NEXT_MONTH, calendarPanel.getNextMonthButton()));
+        fireComponentEvent(new LGoodDatePicker.com.github.lgooddatepicker.components.ComponentEvent(LGoodDatePicker.com.github.lgooddatepicker.components.ComponentEvent.NEXT_YEAR, calendarPanel.getNextYearButton()));
 
         // If needed, apply the selected date to the calendar.
         if (selectedDateForCalendar != null) {
@@ -699,7 +699,7 @@ public class DatePicker extends JPanel implements CustomPopupCloseListener {
     }
 
     /**
-     * zApplyVisibilityOfButtons, This applies any settings that control visibility of components on
+     * zApplyVisibilityOfButtons, This applies any settings that controle visibility of components on
      * this date picker.
      */
     void zApplyVisibilityOfComponents() {
@@ -1034,25 +1034,25 @@ public class DatePicker extends JPanel implements CustomPopupCloseListener {
         lastPopupCloseTime = Instant.now();
     }
 
-    public void addComponentListener(ComponentListener listener) {
+    public void addComponentListener(LGoodDatePicker.com.github.lgooddatepicker.components.ComponentListener listener) {
         if (componentListeners == null) {
-            componentListeners = new ArrayList<ComponentListener>();
+            componentListeners = new ArrayList<LGoodDatePicker.com.github.lgooddatepicker.components.ComponentListener>();
         }
         componentListeners.add(listener);
     }
 
-    public void removeComponentListener(ComponentListener listener) {
+    public void removeComponentListener(LGoodDatePicker.com.github.lgooddatepicker.components.ComponentListener listener) {
         if (componentListeners == null) {
             return;
         }
         componentListeners.remove(listener);
     }
 
-    protected void fireComponentEvent(ComponentEvent e) {
+    protected void fireComponentEvent(LGoodDatePicker.com.github.lgooddatepicker.components.ComponentEvent e) {
         if (componentListeners == null || e == null) {
             return;
         }
-        for (ComponentListener listener : componentListeners) {
+        for (LGoodDatePicker.com.github.lgooddatepicker.components.ComponentListener listener : componentListeners) {
             listener.componentCreated(e);
         }
     }

@@ -1,11 +1,12 @@
-package com.github.lgooddatepicker.ysandbox;
+package LGoodDatePicker.com.github.lgooddatepicker.ysandbox;
 
-import com.github.lgooddatepicker.components.CalendarPanel;
-import com.github.lgooddatepicker.components.DatePickerSettings;
-import com.github.lgooddatepicker.optionalusertools.DateHighlightPolicy;
-import com.github.lgooddatepicker.optionalusertools.DateVetoPolicy;
-import com.github.lgooddatepicker.zinternaltools.CalendarSelectionEvent;
-import com.github.lgooddatepicker.zinternaltools.HighlightInformation;
+import LGoodDatePicker.com.github.lgooddatepicker.components.CalendarPanel;
+import LGoodDatePicker.com.github.lgooddatepicker.optionalusertools.DateHighlightPolicy;
+import LGoodDatePicker.com.github.lgooddatepicker.zinternaltools.HighlightInformation;
+import LGoodDatePicker.com.github.lgooddatepicker.components.DatePickerSettings;
+import LGoodDatePicker.com.github.lgooddatepicker.optionalusertools.DateVetoPolicy;
+import LGoodDatePicker.com.github.lgooddatepicker.zinternaltools.CalendarSelectionEvent;
+
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.time.LocalDate;
@@ -14,8 +15,8 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
 import javax.swing.UIManager;
-import com.github.lgooddatepicker.optionalusertools.CalendarListener;
-import com.github.lgooddatepicker.zinternaltools.YearMonthChangeEvent;
+import LGoodDatePicker.com.github.lgooddatepicker.optionalusertools.CalendarListener;
+import LGoodDatePicker.com.github.lgooddatepicker.zinternaltools.YearMonthChangeEvent;
 
 /**
  * TestUpdateHighlightPolicy, This class tests the library to see if a highlight policy can be

@@ -1,6 +1,6 @@
-package com.github.lgooddatepicker.durationpicker_underconstruction;
+package LGoodDatePicker.com.github.lgooddatepicker.durationpicker_underconstruction;
 
-import com.github.lgooddatepicker.zinternaltools.InternalUtilities;
+import LGoodDatePicker.com.github.lgooddatepicker.zinternaltools.InternalUtilities;
 import java.math.BigDecimal;
 import java.time.Duration;
 import java.util.ArrayList;

@@ -1,4 +1,4 @@
-package com.github.lgooddatepicker.demo;
+package LGoodDatePicker.com.github.lgooddatepicker.demo;
 
 /**
  * zExtraDemos_DataBindingDemo, This is a demonstration of how JavaBeans data binding can be used
@@ -31,7 +31,7 @@ public class zExtra_DataBindingDemo extends javax.swing.JFrame {
         initComponents();
         getContentPane().setBackground(new java.awt.Color(153, 204, 255));
         setTitle("LGoodDatePicker Data Binding Demo "
-                + com.github.lgooddatepicker.zinternaltools.InternalUtilities.getProjectVersionString());
+                + InternalUtilities.getProjectVersionString());
         setLocationRelativeTo(null);
     }
 
@@ -40,17 +40,17 @@ public class zExtra_DataBindingDemo extends javax.swing.JFrame {
     private void initComponents() {
         bindingGroup = new org.jdesktop.beansbinding.BindingGroup();
 
-        calendarPanel_r4_1 = new com.github.lgooddatepicker.components.CalendarPanel();
-        timePicker_r2_1 = new com.github.lgooddatepicker.components.TimePicker();
-        dateTimePicker_r3_1 = new com.github.lgooddatepicker.components.DateTimePicker();
-        datePicker_r1_1 = new com.github.lgooddatepicker.components.DatePicker();
+        calendarPanel_r4_1 = new CalendarPanel();
+        timePicker_r2_1 = new TimePicker();
+        dateTimePicker_r3_1 = new DateTimePicker();
+        datePicker_r1_1 = new DatePicker();
         jTextField_r1_1 = new javax.swing.JTextField();
-        datePicker_r1_2 = new com.github.lgooddatepicker.components.DatePicker();
-        timePicker_r2_2 = new com.github.lgooddatepicker.components.TimePicker();
+        datePicker_r1_2 = new DatePicker();
+        timePicker_r2_2 = new TimePicker();
         jTextField_r2_1 = new javax.swing.JTextField();
-        dateTimePicker_r3_2 = new com.github.lgooddatepicker.components.DateTimePicker();
-        calendarPanel_r4_2 = new com.github.lgooddatepicker.components.CalendarPanel();
-        datePicker_r4_1 = new com.github.lgooddatepicker.components.DatePicker();
+        dateTimePicker_r3_2 = new DateTimePicker();
+        calendarPanel_r4_2 = new CalendarPanel();
+        datePicker_r4_1 = new DatePicker();
         jTextField_r3_1 = new javax.swing.JTextField();
         jTextField_r3_2 = new javax.swing.JTextField();
         jLabelRow2 = new javax.swing.JLabel();
@@ -206,13 +206,13 @@ public class zExtra_DataBindingDemo extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private com.github.lgooddatepicker.components.CalendarPanel calendarPanel_r4_1;
-    private com.github.lgooddatepicker.components.CalendarPanel calendarPanel_r4_2;
-    private com.github.lgooddatepicker.components.DatePicker datePicker_r1_1;
-    private com.github.lgooddatepicker.components.DatePicker datePicker_r1_2;
-    private com.github.lgooddatepicker.components.DatePicker datePicker_r4_1;
-    private com.github.lgooddatepicker.components.DateTimePicker dateTimePicker_r3_1;
-    private com.github.lgooddatepicker.components.DateTimePicker dateTimePicker_r3_2;
+    private CalendarPanel calendarPanel_r4_1;
+    private CalendarPanel calendarPanel_r4_2;
+    private DatePicker datePicker_r1_1;
+    private DatePicker datePicker_r1_2;
+    private DatePicker datePicker_r4_1;
+    private DateTimePicker dateTimePicker_r3_1;
+    private DateTimePicker dateTimePicker_r3_2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabelRow1;
     private javax.swing.JLabel jLabelRow2;
@@ -222,8 +222,8 @@ public class zExtra_DataBindingDemo extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField_r2_1;
     private javax.swing.JTextField jTextField_r3_1;
     private javax.swing.JTextField jTextField_r3_2;
-    private com.github.lgooddatepicker.components.TimePicker timePicker_r2_1;
-    private com.github.lgooddatepicker.components.TimePicker timePicker_r2_2;
+    private TimePicker timePicker_r2_1;
+    private TimePicker timePicker_r2_2;
     private org.jdesktop.beansbinding.BindingGroup bindingGroup;
     // End of variables declaration//GEN-END:variables
 

@@ -1,7 +1,7 @@
-package com.github.lgooddatepicker.zinternaltools;
+package LGoodDatePicker.com.github.lgooddatepicker.zinternaltools;
 
-import com.privatejgoodies.forms.layout.FormLayout;
-import com.privatejgoodies.forms.factories.CC;
+import LGoodDatePicker.com.privatejgoodies.forms.layout.FormLayout;
+import LGoodDatePicker.com.privatejgoodies.forms.factories.CC;
 import java.awt.*;
 import javax.swing.*;
 import javax.swing.border.*;

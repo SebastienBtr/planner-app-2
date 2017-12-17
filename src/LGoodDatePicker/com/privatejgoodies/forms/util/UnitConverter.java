@@ -27,20 +27,23 @@
  * OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
  * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-package com.privatejgoodies.forms.util;
+package LGoodDatePicker.com.privatejgoodies.forms.util;
+
+import LGoodDatePicker.com.privatejgoodies.forms.layout.ConstantSize;
+import LGoodDatePicker.com.privatejgoodies.forms.layout.Sizes;
 
 import java.awt.Component;
 
 /**
  * An interface that describes how to convert general sizes to pixel sizes. For example, <i>dialog
  * units</i> require a conversion that honors the font and resolution. The
- * {@link com.privatejgoodies.forms.layout.Sizes} class delegates all size conversions to an
+ * {@link Sizes} class delegates all size conversions to an
  * implementation of this interface.
  *
  * @author Karsten Lentzsch
  * @version $Revision: 1.7 $
- * @see com.privatejgoodies.forms.layout.Sizes
- * @see com.privatejgoodies.forms.layout.ConstantSize
+ * @see Sizes
+ * @see ConstantSize
  * @see AbstractUnitConverter
  * @see DefaultUnitConverter
  */

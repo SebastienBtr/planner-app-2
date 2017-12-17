@@ -27,7 +27,7 @@
  * OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
  * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-package com.privatejgoodies.forms.layout;
+package LGoodDatePicker.com.privatejgoodies.forms.layout;
 
 import java.awt.Container;
 import java.util.List;
@@ -54,7 +54,7 @@ public interface Size {
      * Computes and returns this Size's maximum pixel size applied to the given list of components
      * using the specified measures.<p>
      *
-     * Invoked by {@link com.privatejgoodies.forms.layout.FormSpec} to determine the size of a
+     * Invoked by {@link FormSpec} to determine the size of a
      * column or row. This method is not intended to be called by API users, and it uses API
      * invisible parameter types.
      *

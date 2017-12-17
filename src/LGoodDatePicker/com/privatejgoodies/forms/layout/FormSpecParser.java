@@ -27,9 +27,11 @@
  * OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
  * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-package com.privatejgoodies.forms.layout;
+package LGoodDatePicker.com.privatejgoodies.forms.layout;
 
-import static com.privatejgoodies.common.base.Preconditions.checkNotNull;
+import LGoodDatePicker.com.privatejgoodies.common.base.Preconditions;
+
+import static LGoodDatePicker.com.privatejgoodies.common.base.Preconditions.checkNotNull;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -76,8 +78,8 @@ public final class FormSpecParser {
             String description,
             LayoutMap layoutMap,
             boolean horizontal) {
-        checkNotNull(source, "The %S must not be null.", description);
-        checkNotNull(layoutMap, "The LayoutMap must not be null.");
+        Preconditions.checkNotNull(source, "The %S must not be null.", description);
+        Preconditions.checkNotNull(layoutMap, "The LayoutMap must not be null.");
         this.layoutMap = layoutMap;
         this.source = this.layoutMap.expand(source, horizontal);
     }

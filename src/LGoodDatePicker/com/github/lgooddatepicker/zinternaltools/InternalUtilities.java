@@ -1,4 +1,4 @@
-package com.github.lgooddatepicker.zinternaltools;
+package LGoodDatePicker.com.github.lgooddatepicker.zinternaltools;
 
 import java.awt.GridBagConstraints;
 import java.util.ArrayList;
@@ -6,9 +6,11 @@ import java.util.Locale;
 import java.util.Properties;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-import com.github.lgooddatepicker.optionalusertools.DateVetoPolicy;
-import com.github.lgooddatepicker.optionalusertools.PickerUtilities;
-import com.github.lgooddatepicker.optionalusertools.TimeVetoPolicy;
+
+import LGoodDatePicker.com.github.lgooddatepicker.optionalusertools.TimeVetoPolicy;
+import LGoodDatePicker.com.github.lgooddatepicker.optionalusertools.DateVetoPolicy;
+import LGoodDatePicker.com.github.lgooddatepicker.optionalusertools.PickerUtilities;
+
 import java.awt.Component;
 import java.awt.GraphicsConfiguration;
 import java.awt.GraphicsEnvironment;

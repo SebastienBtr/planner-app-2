@@ -27,13 +27,12 @@
  * OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
  * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-package com.privatejgoodies.forms.factories;
+package LGoodDatePicker.com.privatejgoodies.forms.factories;
 
 import java.io.Serializable;
 
-import com.privatejgoodies.forms.layout.CellConstraints;
-import com.privatejgoodies.forms.layout.CellConstraints.Alignment;
-import com.privatejgoodies.forms.layout.FormLayout;
+import LGoodDatePicker.com.privatejgoodies.forms.layout.CellConstraints;
+import LGoodDatePicker.com.privatejgoodies.forms.layout.FormLayout;
 
 /**
  * A factory for CellConstraints objects.
@@ -64,13 +63,13 @@ import com.privatejgoodies.forms.layout.FormLayout;
 public final class CC implements Cloneable, Serializable {
 
     // Constants ************************************************************
-    public static final Alignment DEFAULT = CellConstraints.DEFAULT;
-    public static final Alignment FILL = CellConstraints.FILL;
-    public static final Alignment LEFT = CellConstraints.LEFT;
-    public static final Alignment RIGHT = CellConstraints.RIGHT;
-    public static final Alignment CENTER = CellConstraints.CENTER;
-    public static final Alignment TOP = CellConstraints.TOP;
-    public static final Alignment BOTTOM = CellConstraints.BOTTOM;
+    public static final CellConstraints.Alignment DEFAULT = CellConstraints.DEFAULT;
+    public static final CellConstraints.Alignment FILL = CellConstraints.FILL;
+    public static final CellConstraints.Alignment LEFT = CellConstraints.LEFT;
+    public static final CellConstraints.Alignment RIGHT = CellConstraints.RIGHT;
+    public static final CellConstraints.Alignment CENTER = CellConstraints.CENTER;
+    public static final CellConstraints.Alignment TOP = CellConstraints.TOP;
+    public static final CellConstraints.Alignment BOTTOM = CellConstraints.BOTTOM;
 
     // Setters with Column-Row Order ******************************************
     /**
@@ -127,7 +126,7 @@ public final class CC implements Cloneable, Serializable {
      * @return this
      */
     public static CellConstraints xy(int col, int row,
-            Alignment colAlign, Alignment rowAlign) {
+                                     CellConstraints.Alignment colAlign, CellConstraints.Alignment rowAlign) {
         return xywh(col, row, 1, 1, colAlign, rowAlign);
     }
 
@@ -192,7 +191,7 @@ public final class CC implements Cloneable, Serializable {
      * @throws IllegalArgumentException if an alignment orientation is invalid
      */
     public static CellConstraints xyw(int col, int row, int colSpan,
-            Alignment colAlign, Alignment rowAlign) {
+                                      CellConstraints.Alignment colAlign, CellConstraints.Alignment rowAlign) {
         return xywh(col, row, colSpan, 1, colAlign, rowAlign);
     }
 
@@ -257,7 +256,7 @@ public final class CC implements Cloneable, Serializable {
      * @throws IllegalArgumentException if an alignment orientation is invalid
      */
     public static CellConstraints xywh(int col, int row, int colSpan, int rowSpan,
-            Alignment colAlign, Alignment rowAlign) {
+                                       CellConstraints.Alignment colAlign, CellConstraints.Alignment rowAlign) {
         return new CellConstraints(col, row, colSpan, rowSpan, colAlign, rowAlign);
     }
 
@@ -316,7 +315,7 @@ public final class CC implements Cloneable, Serializable {
      * @return this
      */
     public static CellConstraints rc(int row, int col,
-            Alignment rowAlign, Alignment colAlign) {
+                                     CellConstraints.Alignment rowAlign, CellConstraints.Alignment colAlign) {
         return rchw(row, col, 1, 1, rowAlign, colAlign);
     }
 
@@ -383,7 +382,7 @@ public final class CC implements Cloneable, Serializable {
      * @throws IllegalArgumentException if an alignment orientation is invalid
      */
     public static CellConstraints rcw(int row, int col, int colSpan,
-            Alignment rowAlign, Alignment colAlign) {
+                                      CellConstraints.Alignment rowAlign, CellConstraints.Alignment colAlign) {
         return rchw(row, col, 1, colSpan, rowAlign, colAlign);
     }
 
@@ -449,7 +448,7 @@ public final class CC implements Cloneable, Serializable {
      * @throws IllegalArgumentException if an alignment orientation is invalid
      */
     public static CellConstraints rchw(int row, int col, int rowSpan, int colSpan,
-            Alignment rowAlign, Alignment colAlign) {
+                                       CellConstraints.Alignment rowAlign, CellConstraints.Alignment colAlign) {
         return xywh(col, row, colSpan, rowSpan, colAlign, rowAlign);
     }
 

@@ -27,7 +27,7 @@
  * OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
  * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-package com.privatejgoodies.forms.util;
+package LGoodDatePicker.com.privatejgoodies.forms.util;
 
 import javax.swing.LookAndFeel;
 import javax.swing.UIManager;

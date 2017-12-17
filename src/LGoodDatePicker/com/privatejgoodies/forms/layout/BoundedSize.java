@@ -27,9 +27,11 @@
  * OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
  * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-package com.privatejgoodies.forms.layout;
+package LGoodDatePicker.com.privatejgoodies.forms.layout;
 
-import static com.privatejgoodies.common.base.Preconditions.checkNotNull;
+import LGoodDatePicker.com.privatejgoodies.common.base.Preconditions;
+
+import static LGoodDatePicker.com.privatejgoodies.common.base.Preconditions.checkNotNull;
 
 import java.awt.Container;
 import java.io.Serializable;
@@ -75,7 +77,7 @@ public final class BoundedSize implements Size, Serializable {
      * @since 1.1
      */
     public BoundedSize(Size basis, Size lowerBound, Size upperBound) {
-        this.basis = checkNotNull(basis, "The basis must not be null.");
+        this.basis = Preconditions.checkNotNull(basis, "The basis must not be null.");
         this.lowerBound = lowerBound;
         this.upperBound = upperBound;
         if (lowerBound == null && upperBound == null) {

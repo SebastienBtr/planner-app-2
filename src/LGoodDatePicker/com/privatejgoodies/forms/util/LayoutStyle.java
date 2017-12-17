@@ -27,11 +27,12 @@
  * OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
  * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-package com.privatejgoodies.forms.util;
+package LGoodDatePicker.com.privatejgoodies.forms.util;
 
-import com.privatejgoodies.common.base.SystemUtils;
-import com.privatejgoodies.forms.layout.ConstantSize;
-import com.privatejgoodies.forms.layout.Size;
+import LGoodDatePicker.com.privatejgoodies.common.base.SystemUtils;
+import LGoodDatePicker.com.privatejgoodies.forms.layout.ConstantSize;
+import LGoodDatePicker.com.privatejgoodies.forms.layout.FormSpecs;
+import LGoodDatePicker.com.privatejgoodies.forms.layout.Size;
 
 /**
  * An abstract class that describes a layout and design style guide. It provides constants used to
@@ -44,9 +45,9 @@ import com.privatejgoodies.forms.layout.Size;
  * @author Karsten Lentzsch
  * @version $Revision: 1.15 $
  *
- * @see com.privatejgoodies.forms.util.MacLayoutStyle
- * @see com.privatejgoodies.forms.util.WindowsLayoutStyle
- * @see com.privatejgoodies.forms.layout.FormSpecs
+ * @see MacLayoutStyle
+ * @see WindowsLayoutStyle
+ * @see FormSpecs
  */
 public abstract class LayoutStyle {
 
@@ -151,9 +152,9 @@ public abstract class LayoutStyle {
     public abstract ConstantSize getTabbedDialogMarginY();
 
     /**
-     * Returns a gap used to separate a label and associated control.
+     * Returns a gap used to separate a label and associated controle.
      *
-     * @return a gap between label and associated control
+     * @return a gap between label and associated controle
      *
      * @see #getRelatedComponentsPadX()
      * @see #getUnrelatedComponentsPadX()
@@ -161,9 +162,9 @@ public abstract class LayoutStyle {
     public abstract ConstantSize getLabelComponentPadX();
 
     /**
-     * Returns a gap used to separate a label and associated control.
+     * Returns a gap used to separate a label and associated controle.
      *
-     * @return a gap between label and associated control
+     * @return a gap between label and associated controle
      *
      * @see #getRelatedComponentsPadY()
      * @see #getUnrelatedComponentsPadY()

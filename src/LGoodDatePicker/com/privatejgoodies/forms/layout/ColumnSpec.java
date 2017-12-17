@@ -27,10 +27,12 @@
  * OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
  * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-package com.privatejgoodies.forms.layout;
+package LGoodDatePicker.com.privatejgoodies.forms.layout;
 
-import static com.privatejgoodies.common.base.Preconditions.checkNotBlank;
-import static com.privatejgoodies.common.base.Preconditions.checkNotNull;
+import LGoodDatePicker.com.privatejgoodies.common.base.Preconditions;
+
+import static LGoodDatePicker.com.privatejgoodies.common.base.Preconditions.checkNotBlank;
+import static LGoodDatePicker.com.privatejgoodies.common.base.Preconditions.checkNotNull;
 
 import java.util.HashMap;
 import java.util.Locale;
@@ -52,13 +54,13 @@ import java.util.Map;
  * ColumnSpec.parse("fill:10dlu:0");
  * </pre><p>
  *
- * The {@link com.privatejgoodies.forms.layout.FormSpecs} provides predefined frequently used
+ * The {@link FormSpecs} provides predefined frequently used
  * ColumnSpec instances.
  *
  * @author	Karsten Lentzsch
  * @version $Revision: 1.20 $
  *
- * @see com.privatejgoodies.forms.layout.FormSpecs
+ * @see FormSpecs
  */
 public final class ColumnSpec extends FormSpec {
 
@@ -66,22 +68,22 @@ public final class ColumnSpec extends FormSpec {
     /**
      * By default put components in the left.
      */
-    public static final DefaultAlignment LEFT = FormSpec.LEFT_ALIGN;
+    public static final DefaultAlignment LEFT = LEFT_ALIGN;
 
     /**
      * By default put the components in the center.
      */
-    public static final DefaultAlignment CENTER = FormSpec.CENTER_ALIGN;
+    public static final DefaultAlignment CENTER = CENTER_ALIGN;
 
     /**
      * By default put components in the right.
      */
-    public static final DefaultAlignment RIGHT = FormSpec.RIGHT_ALIGN;
+    public static final DefaultAlignment RIGHT = RIGHT_ALIGN;
 
     /**
      * By default fill the component into the column.
      */
-    public static final DefaultAlignment FILL = FormSpec.FILL_ALIGN;
+    public static final DefaultAlignment FILL = FILL_ALIGN;
 
     /**
      * Unless overridden the default alignment for a column is FILL.
@@ -152,7 +154,7 @@ public final class ColumnSpec extends FormSpec {
      * @since 1.2
      */
     public static ColumnSpec createGap(ConstantSize gapWidth) {
-        return new ColumnSpec(DEFAULT, gapWidth, FormSpec.NO_GROW);
+        return new ColumnSpec(DEFAULT, gapWidth, NO_GROW);
     }
 
     /**
@@ -190,9 +192,9 @@ public final class ColumnSpec extends FormSpec {
      * @since 1.2
      */
     public static ColumnSpec decode(String encodedColumnSpec, LayoutMap layoutMap) {
-        checkNotBlank(encodedColumnSpec,
+        Preconditions.checkNotBlank(encodedColumnSpec,
                 "The encoded column specification must not be null, empty or whitespace.");
-        checkNotNull(layoutMap, "The LayoutMap must not be null.");
+        Preconditions.checkNotNull(layoutMap, "The LayoutMap must not be null.");
         String trimmed = encodedColumnSpec.trim();
         String lower = trimmed.toLowerCase(Locale.ENGLISH);
         return decodeExpanded(layoutMap.expand(lower, true));

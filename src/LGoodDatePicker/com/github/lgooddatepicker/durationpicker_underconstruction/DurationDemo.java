@@ -1,12 +1,12 @@
-package com.github.lgooddatepicker.durationpicker_underconstruction;
+package LGoodDatePicker.com.github.lgooddatepicker.durationpicker_underconstruction;
 
-import com.github.lgooddatepicker.components.DatePicker;
-import com.github.lgooddatepicker.components.DatePickerSettings;
-import com.github.lgooddatepicker.components.DateTimePicker;
-import com.github.lgooddatepicker.components.TimePicker;
-import com.github.lgooddatepicker.components.TimePickerSettings;
-import com.github.lgooddatepicker.components.TimePickerSettings.TimeArea;
-import com.github.lgooddatepicker.zinternaltools.InternalUtilities;
+import LGoodDatePicker.com.github.lgooddatepicker.components.DatePicker;
+import LGoodDatePicker.com.github.lgooddatepicker.components.DateTimePicker;
+import LGoodDatePicker.com.github.lgooddatepicker.components.DatePickerSettings;
+import LGoodDatePicker.com.github.lgooddatepicker.components.TimePicker;
+import LGoodDatePicker.com.github.lgooddatepicker.components.TimePickerSettings;
+import LGoodDatePicker.com.github.lgooddatepicker.components.TimePickerSettings.TimeArea;
+import LGoodDatePicker.com.github.lgooddatepicker.zinternaltools.InternalUtilities;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.FlowLayout;

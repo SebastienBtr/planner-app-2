@@ -27,16 +27,17 @@
  * OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
  * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-package com.privatejgoodies.forms.layout;
+package LGoodDatePicker.com.privatejgoodies.forms.layout;
 
-import static com.privatejgoodies.common.base.Preconditions.checkNotNull;
+import static LGoodDatePicker.com.privatejgoodies.common.base.Preconditions.checkNotNull;
 
 import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
 import java.util.Map.Entry;
 
-import com.privatejgoodies.forms.util.LayoutStyle;
+import LGoodDatePicker.com.privatejgoodies.common.base.Preconditions;
+import LGoodDatePicker.com.privatejgoodies.forms.util.LayoutStyle;
 
 /**
  * Provides a hierarchical variable expansion useful to improve layout consistency, style guide
@@ -277,7 +278,7 @@ public final class LayoutMap {
      * @see Map#put(Object, Object)
      */
     public String columnPut(String key, String value) {
-        checkNotNull(value, "The column expression value must not be null.");
+        Preconditions.checkNotNull(value, "The column expression value must not be null.");
         String resolvedKey = resolveColumnKey(key);
         columnMapCache.clear();
         return columnMap.put(
@@ -364,7 +365,7 @@ public final class LayoutMap {
     }
 
     public String rowPut(String key, String value) {
-        checkNotNull(value, "The row expression value must not be null.");
+        Preconditions.checkNotNull(value, "The row expression value must not be null.");
         String resolvedKey = resolveRowKey(key);
         rowMapCache.clear();
         return rowMap.put(
@@ -502,14 +503,14 @@ public final class LayoutMap {
 
     // Helper Code ************************************************************
     private static String resolveColumnKey(String key) {
-        checkNotNull(key, "The column key must not be null.");
+        Preconditions.checkNotNull(key, "The column key must not be null.");
         String lowercaseKey = key.toLowerCase(Locale.ENGLISH);
         String defaultKey = COLUMN_ALIASES.get(lowercaseKey);
         return defaultKey == null ? lowercaseKey : defaultKey;
     }
 
     private static String resolveRowKey(String key) {
-        checkNotNull(key, "The row key must not be null.");
+        Preconditions.checkNotNull(key, "The row key must not be null.");
         String lowercaseKey = key.toLowerCase(Locale.ENGLISH);
         String defaultKey = ROW_ALIASES.get(lowercaseKey);
         return defaultKey == null ? lowercaseKey : defaultKey;

@@ -27,10 +27,10 @@
  * OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
  * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-package com.privatejgoodies.forms.layout;
+package LGoodDatePicker.com.privatejgoodies.forms.layout;
 
-import static com.privatejgoodies.common.base.Preconditions.checkNotNull;
-import static com.privatejgoodies.common.base.Preconditions.checkState;
+import static LGoodDatePicker.com.privatejgoodies.common.base.Preconditions.checkNotNull;
+import static LGoodDatePicker.com.privatejgoodies.common.base.Preconditions.checkState;
 
 import java.awt.Component;
 import java.awt.Container;
@@ -50,7 +50,8 @@ import java.util.Set;
 
 import javax.swing.JComponent;
 
-import com.privatejgoodies.common.base.Objects;
+import LGoodDatePicker.com.privatejgoodies.common.base.Objects;
+import LGoodDatePicker.com.privatejgoodies.common.base.Preconditions;
 
 /**
  * FormLayout is a powerful, flexible and precise general purpose layout manager. It aligns
@@ -138,7 +139,7 @@ import com.privatejgoodies.common.base.Objects;
  * @see	ColumnSpec
  * @see	RowSpec
  * @see	CellConstraints see	com.privatejgoodies.forms.builder.AbstractFormBuilder
- * @see	com.privatejgoodies.forms.layout.FormSpecs
+ * @see    FormSpecs
  * @see	Size
  * @see	Sizes See com.privatejgoodies.forms.builder.DefaultFormBuilder
  */
@@ -411,8 +412,8 @@ public final class FormLayout implements LayoutManager2, Serializable {
      * @throws NullPointerException if {@code colSpecs} or {@code rowSpecs} is {@code null}
      */
     public FormLayout(ColumnSpec[] colSpecs, RowSpec[] rowSpecs) {
-        checkNotNull(colSpecs, "The column specifications must not be null.");
-        checkNotNull(rowSpecs, "The row specifications must not be null.");
+        Preconditions.checkNotNull(colSpecs, "The column specifications must not be null.");
+        Preconditions.checkNotNull(rowSpecs, "The row specifications must not be null.");
         this.colSpecs = new ArrayList<ColumnSpec>(Arrays.asList(colSpecs));
         this.rowSpecs = new ArrayList<RowSpec>(Arrays.asList(rowSpecs));
         colGroupIndices = new int[][]{};
@@ -456,7 +457,7 @@ public final class FormLayout implements LayoutManager2, Serializable {
      * @throws IndexOutOfBoundsException if the column index is out of range
      */
     public void setColumnSpec(int columnIndex, ColumnSpec columnSpec) {
-        checkNotNull(columnSpec, "The column spec must not be null.");
+        Preconditions.checkNotNull(columnSpec, "The column spec must not be null.");
         colSpecs.set(columnIndex - 1, columnSpec);
     }
 
@@ -467,7 +468,7 @@ public final class FormLayout implements LayoutManager2, Serializable {
      * @throws NullPointerException if {@code columnSpec} is {@code null}
      */
     public void appendColumn(ColumnSpec columnSpec) {
-        checkNotNull(columnSpec, "The column spec must not be null.");
+        Preconditions.checkNotNull(columnSpec, "The column spec must not be null.");
         colSpecs.add(columnSpec);
     }
 
@@ -564,7 +565,7 @@ public final class FormLayout implements LayoutManager2, Serializable {
      * @throws IndexOutOfBoundsException if the row index is out of range
      */
     public void setRowSpec(int rowIndex, RowSpec rowSpec) {
-        checkNotNull(rowSpec, "The row spec must not be null.");
+        Preconditions.checkNotNull(rowSpec, "The row spec must not be null.");
         rowSpecs.set(rowIndex - 1, rowSpec);
     }
 
@@ -575,7 +576,7 @@ public final class FormLayout implements LayoutManager2, Serializable {
      * @throws NullPointerException if {@code rowSpec} is {@code null}
      */
     public void appendRow(RowSpec rowSpec) {
-        checkNotNull(rowSpec, "The row spec must not be null.");
+        Preconditions.checkNotNull(rowSpec, "The row spec must not be null.");
         rowSpecs.add(rowSpec);
     }
 
@@ -740,9 +741,9 @@ public final class FormLayout implements LayoutManager2, Serializable {
     }
 
     private CellConstraints getConstraints0(Component component) {
-        checkNotNull(component, "The component must not be null.");
+        Preconditions.checkNotNull(component, "The component must not be null.");
         CellConstraints constraints = constraintMap.get(component);
-        checkState(constraints != null, "The component has not been added to the container.");
+        Preconditions.checkState(constraints != null, "The component has not been added to the container.");
         return constraints;
     }
 
@@ -754,8 +755,8 @@ public final class FormLayout implements LayoutManager2, Serializable {
      * @throws NullPointerException if {@code component} or {@code constraints} is {@code null}
      */
     public void setConstraints(Component component, CellConstraints constraints) {
-        checkNotNull(component, "The component must not be null.");
-        checkNotNull(constraints, "The constraints must not be null.");
+        Preconditions.checkNotNull(component, "The component must not be null.");
+        Preconditions.checkNotNull(constraints, "The constraints must not be null.");
         constraints.ensureValidGridBounds(getColumnCount(), getRowCount());
         constraintMap.put(component, (CellConstraints) constraints.clone());
     }
@@ -1018,7 +1019,7 @@ public final class FormLayout implements LayoutManager2, Serializable {
      */
     @Override
     public void addLayoutComponent(Component comp, Object constraints) {
-        checkNotNull(constraints, "The constraints must not be null.");
+        Preconditions.checkNotNull(constraints, "The constraints must not be null.");
         if (constraints instanceof String) {
             setConstraints(comp, new CellConstraints((String) constraints));
         } else if (constraints instanceof CellConstraints) {

@@ -27,11 +27,13 @@
  * OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
  * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-package com.privatejgoodies.forms.layout;
+package LGoodDatePicker.com.privatejgoodies.forms.layout;
 
-import static com.privatejgoodies.common.base.Preconditions.checkArgument;
-import static com.privatejgoodies.common.base.Preconditions.checkNotBlank;
-import static com.privatejgoodies.common.base.Preconditions.checkNotNull;
+import LGoodDatePicker.com.privatejgoodies.common.base.Preconditions;
+
+import static LGoodDatePicker.com.privatejgoodies.common.base.Preconditions.checkArgument;
+import static LGoodDatePicker.com.privatejgoodies.common.base.Preconditions.checkNotBlank;
+import static LGoodDatePicker.com.privatejgoodies.common.base.Preconditions.checkNotNull;
 
 import java.awt.Container;
 import java.io.Serializable;
@@ -147,8 +149,8 @@ public abstract class FormSpec implements Serializable {
     protected FormSpec(DefaultAlignment defaultAlignment,
             Size size,
             double resizeWeight) {
-        checkNotNull(size, "The size must not be null.");
-        checkArgument(resizeWeight >= 0, "The resize weight must be non-negative.");
+        Preconditions.checkNotNull(size, "The size must not be null.");
+        Preconditions.checkArgument(resizeWeight >= 0, "The resize weight must be non-negative.");
         this.defaultAlignment = defaultAlignment;
         this.size = size;
         this.resizeWeight = resizeWeight;
@@ -238,10 +240,10 @@ public abstract class FormSpec implements Serializable {
      * size, or is otherwise invalid
      */
     private void parseAndInitValues(String encodedDescription) {
-        checkNotBlank(encodedDescription,
+        Preconditions.checkNotBlank(encodedDescription,
                 "The encoded form specification must not be null, empty or whitespace.");
         String[] token = TOKEN_SEPARATOR_PATTERN.split(encodedDescription);
-        checkArgument(token.length > 0, "The form spec must not be empty.");
+        Preconditions.checkArgument(token.length > 0, "The form spec must not be empty.");
         int nextIndex = 0;
         String next = token[nextIndex++];
 
@@ -249,7 +251,7 @@ public abstract class FormSpec implements Serializable {
         DefaultAlignment alignment = DefaultAlignment.valueOf(next, isHorizontal());
         if (alignment != null) {
             setDefaultAlignment(alignment);
-            checkArgument(token.length > 1, "The form spec must provide a size.");
+            Preconditions.checkArgument(token.length > 1, "The form spec must provide a size.");
             next = token[nextIndex++];
         }
         setSize(parseSize(next));

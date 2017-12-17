@@ -1,9 +1,9 @@
-package com.github.lgooddatepicker.demo;
+package LGoodDatePicker.com.github.lgooddatepicker.demo;
 
-import com.github.lgooddatepicker.tableeditors.DateTableEditor;
-import com.github.lgooddatepicker.tableeditors.DateTimeTableEditor;
-import com.github.lgooddatepicker.tableeditors.TimeTableEditor;
-import com.github.lgooddatepicker.zinternaltools.InternalUtilities;
+import LGoodDatePicker.com.github.lgooddatepicker.tableeditors.DateTableEditor;
+import LGoodDatePicker.com.github.lgooddatepicker.tableeditors.TimeTableEditor;
+import LGoodDatePicker.com.github.lgooddatepicker.tableeditors.DateTimeTableEditor;
+import LGoodDatePicker.com.github.lgooddatepicker.zinternaltools.InternalUtilities;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.GridLayout;

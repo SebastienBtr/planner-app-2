@@ -27,10 +27,12 @@
  * OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
  * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-package com.privatejgoodies.forms.layout;
+package LGoodDatePicker.com.privatejgoodies.forms.layout;
 
-import static com.privatejgoodies.common.base.Preconditions.checkNotBlank;
-import static com.privatejgoodies.common.base.Preconditions.checkNotNull;
+import LGoodDatePicker.com.privatejgoodies.common.base.Preconditions;
+
+import static LGoodDatePicker.com.privatejgoodies.common.base.Preconditions.checkNotBlank;
+import static LGoodDatePicker.com.privatejgoodies.common.base.Preconditions.checkNotNull;
 
 import java.util.HashMap;
 import java.util.Locale;
@@ -50,13 +52,13 @@ import java.util.Map;
  * RowSpec.parse("center:14dlu:0");
  * </pre><p>
  *
- * The {@link com.privatejgoodies.forms.layout.FormSpecs} provides predefined frequently used
+ * The {@link FormSpecs} provides predefined frequently used
  * RowSpec instances.
  *
  * @author	Karsten Lentzsch
  * @version $Revision: 1.20 $
  *
- * @see com.privatejgoodies.forms.layout.FormSpecs
+ * @see FormSpecs
  */
 public final class RowSpec extends FormSpec {
 
@@ -183,9 +185,9 @@ public final class RowSpec extends FormSpec {
      * @since 1.2
      */
     public static RowSpec decode(String encodedRowSpec, LayoutMap layoutMap) {
-        checkNotBlank(encodedRowSpec,
+        Preconditions.checkNotBlank(encodedRowSpec,
                 "The encoded row specification must not be null, empty or whitespace.");
-        checkNotNull(layoutMap,
+        Preconditions.checkNotNull(layoutMap,
                 "The LayoutMap must not be null.");
         String trimmed = encodedRowSpec.trim();
         String lower = trimmed.toLowerCase(Locale.ENGLISH);

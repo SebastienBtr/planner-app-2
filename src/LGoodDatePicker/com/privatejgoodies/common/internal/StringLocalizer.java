@@ -27,7 +27,7 @@
  * OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
  * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-package com.privatejgoodies.common.internal;
+package LGoodDatePicker.com.privatejgoodies.common.internal;
 
 /**
  * Describes an object that can localize Strings accessible via a key.<p>

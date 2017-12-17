@@ -1,4 +1,4 @@
-package com.github.lgooddatepicker.optionalusertools;
+package LGoodDatePicker.com.github.lgooddatepicker.optionalusertools;
 
 import java.time.*;
 import java.time.format.*;

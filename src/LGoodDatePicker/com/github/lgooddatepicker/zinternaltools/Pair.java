@@ -1,4 +1,4 @@
-package com.github.lgooddatepicker.zinternaltools;
+package LGoodDatePicker.com.github.lgooddatepicker.zinternaltools;
 
 /**
  * Pair, This class allows storing and editing of pairs of data. Since this class uses generics, the

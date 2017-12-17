@@ -1,15 +1,15 @@
-package com.github.lgooddatepicker.components;
+package LGoodDatePicker.com.github.lgooddatepicker.components;
 
-import com.privatejgoodies.forms.layout.FormLayout;
-import com.privatejgoodies.forms.layout.ConstantSize;
-import com.privatejgoodies.forms.layout.ColumnSpec;
-import com.privatejgoodies.forms.factories.CC;
-import com.github.lgooddatepicker.optionalusertools.DateChangeListener;
-import com.github.lgooddatepicker.optionalusertools.DateTimeChangeListener;
-import com.github.lgooddatepicker.optionalusertools.TimeChangeListener;
-import com.github.lgooddatepicker.zinternaltools.DateChangeEvent;
-import com.github.lgooddatepicker.zinternaltools.DateTimeChangeEvent;
-import com.github.lgooddatepicker.zinternaltools.TimeChangeEvent;
+import LGoodDatePicker.com.privatejgoodies.forms.layout.FormLayout;
+import LGoodDatePicker.com.privatejgoodies.forms.layout.ConstantSize;
+import LGoodDatePicker.com.privatejgoodies.forms.layout.ColumnSpec;
+import LGoodDatePicker.com.privatejgoodies.forms.factories.CC;
+import LGoodDatePicker.com.github.lgooddatepicker.optionalusertools.DateChangeListener;
+import LGoodDatePicker.com.github.lgooddatepicker.optionalusertools.DateTimeChangeListener;
+import LGoodDatePicker.com.github.lgooddatepicker.optionalusertools.TimeChangeListener;
+import LGoodDatePicker.com.github.lgooddatepicker.zinternaltools.DateChangeEvent;
+import LGoodDatePicker.com.github.lgooddatepicker.zinternaltools.DateTimeChangeEvent;
+import LGoodDatePicker.com.github.lgooddatepicker.zinternaltools.TimeChangeEvent;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;

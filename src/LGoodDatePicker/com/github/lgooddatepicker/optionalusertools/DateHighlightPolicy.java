@@ -1,7 +1,8 @@
-package com.github.lgooddatepicker.optionalusertools;
+package LGoodDatePicker.com.github.lgooddatepicker.optionalusertools;
 
 import java.time.*;
-import com.github.lgooddatepicker.zinternaltools.HighlightInformation;
+
+import LGoodDatePicker.com.github.lgooddatepicker.zinternaltools.HighlightInformation;
 
 /**
  * HighlightPolicy, A highlight policy can be implemented to highlight certain dates in your

@@ -27,9 +27,9 @@
  * OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
  * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-package com.privatejgoodies.common.internal;
+package LGoodDatePicker.com.privatejgoodies.common.internal;
 
-import com.privatejgoodies.common.bean.ObservableBean2;
+import LGoodDatePicker.com.privatejgoodies.common.bean.ObservableBean2;
 
 /**
  * Describes beans that can look up an Action for a given Action name.<p>

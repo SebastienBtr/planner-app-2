@@ -1,12 +1,12 @@
-package com.github.lgooddatepicker.demo;
+package LGoodDatePicker.com.github.lgooddatepicker.demo;
 
-import com.github.lgooddatepicker.components.DatePicker;
-import com.github.lgooddatepicker.components.DatePickerSettings;
-import com.github.lgooddatepicker.components.DateTimePicker;
-import com.github.lgooddatepicker.components.TimePicker;
-import com.github.lgooddatepicker.components.TimePickerSettings;
-import com.github.lgooddatepicker.components.TimePickerSettings.TimeArea;
-import com.github.lgooddatepicker.zinternaltools.InternalUtilities;
+import LGoodDatePicker.com.github.lgooddatepicker.zinternaltools.InternalUtilities;
+import LGoodDatePicker.com.github.lgooddatepicker.components.DatePicker;
+import LGoodDatePicker.com.github.lgooddatepicker.components.DatePickerSettings;
+import LGoodDatePicker.com.github.lgooddatepicker.components.DateTimePicker;
+import LGoodDatePicker.com.github.lgooddatepicker.components.TimePicker;
+import LGoodDatePicker.com.github.lgooddatepicker.components.TimePickerSettings;
+
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
@@ -87,7 +87,7 @@ public class BasicDemo extends JFrame {
 
         // Create a time picker with some custom settings.
         TimePickerSettings timeSettings = new TimePickerSettings();
-        timeSettings.setColor(TimeArea.TimePickerTextValidTime, Color.blue);
+        timeSettings.setColor(TimePickerSettings.TimeArea.TimePickerTextValidTime, Color.blue);
         timeSettings.initialTime = LocalTime.now();
         TimePicker timePicker2 = new TimePicker(timeSettings);
         // To display this picker, uncomment this line.

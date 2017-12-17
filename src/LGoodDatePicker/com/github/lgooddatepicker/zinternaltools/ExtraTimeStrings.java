@@ -1,4 +1,4 @@
-package com.github.lgooddatepicker.zinternaltools;
+package LGoodDatePicker.com.github.lgooddatepicker.zinternaltools;
 
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeFormatterBuilder;

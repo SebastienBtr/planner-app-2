@@ -27,9 +27,9 @@
  * OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
  * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-package com.privatejgoodies.forms.layout;
+package LGoodDatePicker.com.privatejgoodies.forms.layout;
 
-import com.privatejgoodies.forms.util.LayoutStyle;
+import LGoodDatePicker.com.privatejgoodies.forms.util.LayoutStyle;
 
 /**
  * Provides frequently used column and row specifications.
@@ -37,7 +37,7 @@ import com.privatejgoodies.forms.util.LayoutStyle;
  * @author	Karsten Lentzsch
  * @version $Revision: 1.17 $
  *
- * @see	com.privatejgoodies.forms.layout.FormLayout
+ * @see    FormLayout
  * @see	ColumnSpec
  *
  * @since 1.6 This class was the FormFactory before.

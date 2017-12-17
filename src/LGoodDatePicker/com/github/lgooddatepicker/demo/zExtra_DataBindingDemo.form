@@ -112,13 +112,13 @@
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="com.github.lgooddatepicker.components.CalendarPanel" name="calendarPanel_r4_1">
+    <Component class="CalendarPanel" name="calendarPanel_r4_1">
     </Component>
-    <Component class="com.github.lgooddatepicker.components.TimePicker" name="timePicker_r2_1">
+    <Component class="TimePicker" name="timePicker_r2_1">
     </Component>
-    <Component class="com.github.lgooddatepicker.components.DateTimePicker" name="dateTimePicker_r3_1">
+    <Component class="DateTimePicker" name="dateTimePicker_r3_1">
     </Component>
-    <Component class="com.github.lgooddatepicker.components.DatePicker" name="datePicker_r1_1">
+    <Component class="DatePicker" name="datePicker_r1_1">
     </Component>
     <Component class="javax.swing.JTextField" name="jTextField_r1_1">
       <BindingProperties>
@@ -128,12 +128,12 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField_r1_1ActionPerformed"/>
       </Events>
     </Component>
-    <Component class="com.github.lgooddatepicker.components.DatePicker" name="datePicker_r1_2">
+    <Component class="DatePicker" name="datePicker_r1_2">
       <BindingProperties>
         <BindingProperty name="date" source="datePicker_r1_1" sourcePath="${date}" target="datePicker_r1_2" targetPath="date" updateStrategy="0" immediately="false"/>
       </BindingProperties>
     </Component>
-    <Component class="com.github.lgooddatepicker.components.TimePicker" name="timePicker_r2_2">
+    <Component class="TimePicker" name="timePicker_r2_2">
       <BindingProperties>
         <BindingProperty name="time" source="timePicker_r2_1" sourcePath="${time}" target="timePicker_r2_2" targetPath="time" updateStrategy="0" immediately="false"/>
       </BindingProperties>
@@ -145,17 +145,17 @@
         </BindingProperty>
       </BindingProperties>
     </Component>
-    <Component class="com.github.lgooddatepicker.components.DateTimePicker" name="dateTimePicker_r3_2">
+    <Component class="DateTimePicker" name="dateTimePicker_r3_2">
       <BindingProperties>
         <BindingProperty name="dateTimeStrict" source="dateTimePicker_r3_1" sourcePath="${dateTimePermissive}" target="dateTimePicker_r3_2" targetPath="dateTimeStrict" updateStrategy="0" immediately="false"/>
       </BindingProperties>
     </Component>
-    <Component class="com.github.lgooddatepicker.components.CalendarPanel" name="calendarPanel_r4_2">
+    <Component class="CalendarPanel" name="calendarPanel_r4_2">
       <BindingProperties>
         <BindingProperty name="selectedDate" source="calendarPanel_r4_1" sourcePath="${selectedDate}" target="calendarPanel_r4_2" targetPath="selectedDate" updateStrategy="0" immediately="false"/>
       </BindingProperties>
     </Component>
-    <Component class="com.github.lgooddatepicker.components.DatePicker" name="datePicker_r4_1">
+    <Component class="DatePicker" name="datePicker_r4_1">
       <BindingProperties>
         <BindingProperty name="date" source="calendarPanel_r4_1" sourcePath="${selectedDate}" target="datePicker_r4_1" targetPath="date" updateStrategy="0" immediately="false"/>
       </BindingProperties>

@@ -27,13 +27,15 @@
  * OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
  * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-package com.privatejgoodies.forms.util;
+package LGoodDatePicker.com.privatejgoodies.forms.util;
 
 import java.awt.Component;
 import java.awt.FontMetrics;
 import java.awt.Toolkit;
 
-import com.privatejgoodies.common.bean.Bean;
+import LGoodDatePicker.com.privatejgoodies.forms.layout.Size;
+import LGoodDatePicker.com.privatejgoodies.forms.layout.Sizes;
+import LGoodDatePicker.com.privatejgoodies.common.bean.Bean;
 
 /**
  * An abstract implementation of the {@link UnitConverter} interface that minimizes the effort
@@ -43,8 +45,8 @@ import com.privatejgoodies.common.bean.Bean;
  * @version $Revision: 1.8 $
  *
  * @see DefaultUnitConverter
- * @see com.privatejgoodies.forms.layout.Size
- * @see com.privatejgoodies.forms.layout.Sizes
+ * @see Size
+ * @see Sizes
  */
 public abstract class AbstractUnitConverter extends Bean implements UnitConverter {
 

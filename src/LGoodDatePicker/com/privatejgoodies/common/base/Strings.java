@@ -27,7 +27,7 @@
  * OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
  * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-package com.privatejgoodies.common.base;
+package LGoodDatePicker.com.privatejgoodies.common.base;
 
 /**
  * Provides frequently used static null-safe String testing methods .

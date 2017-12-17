@@ -27,10 +27,13 @@
  * OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
  * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-package com.privatejgoodies.forms.util;
+package LGoodDatePicker.com.privatejgoodies.forms.util;
 
-import static com.privatejgoodies.common.base.Preconditions.checkNotBlank;
-import static com.privatejgoodies.common.internal.Messages.MUST_NOT_BE_BLANK;
+import LGoodDatePicker.com.privatejgoodies.forms.layout.Size;
+import LGoodDatePicker.com.privatejgoodies.forms.layout.Sizes;
+
+import static LGoodDatePicker.com.privatejgoodies.common.base.Preconditions.checkNotBlank;
+import static LGoodDatePicker.com.privatejgoodies.common.internal.Messages.MUST_NOT_BE_BLANK;
 
 import java.awt.Component;
 import java.awt.Font;
@@ -66,8 +69,8 @@ import javax.swing.UIManager;
  * @version $Revision: 1.23 $
  * @author Karsten Lentzsch
  * @see UnitConverter
- * @see com.privatejgoodies.forms.layout.Size
- * @see com.privatejgoodies.forms.layout.Sizes
+ * @see Size
+ * @see Sizes
  */
 public final class DefaultUnitConverter extends AbstractUnitConverter {
 

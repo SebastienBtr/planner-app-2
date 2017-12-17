@@ -1,12 +1,10 @@
-package com.github.lgooddatepicker.ysandbox;
+package LGoodDatePicker.com.github.lgooddatepicker.ysandbox;
 
-import com.github.lgooddatepicker.components.CalendarPanel;
-import java.util.Locale;
-import com.github.lgooddatepicker.components.DatePicker;
-import com.github.lgooddatepicker.components.DatePickerSettings;
-import com.github.lgooddatepicker.optionalusertools.DateHighlightPolicy;
-import com.github.lgooddatepicker.optionalusertools.DateVetoPolicy;
-import com.github.lgooddatepicker.zinternaltools.HighlightInformation;
+import LGoodDatePicker.com.github.lgooddatepicker.components.DatePicker;
+import LGoodDatePicker.com.github.lgooddatepicker.components.DatePickerSettings;
+import LGoodDatePicker.com.github.lgooddatepicker.optionalusertools.DateHighlightPolicy;
+import LGoodDatePicker.com.github.lgooddatepicker.optionalusertools.DateVetoPolicy;
+import LGoodDatePicker.com.github.lgooddatepicker.zinternaltools.HighlightInformation;
 import java.awt.Color;
 import java.awt.GraphicsEnvironment;
 import java.time.DayOfWeek;

@@ -1,8 +1,8 @@
-package com.github.lgooddatepicker.demo;
+package LGoodDatePicker.com.github.lgooddatepicker.demo;
 
-import com.github.lgooddatepicker.components.CalendarPanel;
-import com.github.lgooddatepicker.zinternaltools.DemoPanel;
-import com.github.lgooddatepicker.components.DatePicker;
+import LGoodDatePicker.com.github.lgooddatepicker.components.CalendarPanel;
+import LGoodDatePicker.com.github.lgooddatepicker.zinternaltools.DemoPanel;
+import LGoodDatePicker.com.github.lgooddatepicker.components.DatePicker;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import java.awt.event.ActionEvent;
@@ -14,29 +14,27 @@ import java.awt.GridBagConstraints;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import javax.swing.JPanel;
-import com.github.lgooddatepicker.components.DatePickerSettings;
-import com.github.lgooddatepicker.components.DatePickerSettings.DateArea;
-import com.github.lgooddatepicker.optionalusertools.DateChangeListener;
-import com.github.lgooddatepicker.optionalusertools.PickerUtilities;
-import com.github.lgooddatepicker.zinternaltools.DateChangeEvent;
-import com.github.lgooddatepicker.zinternaltools.InternalUtilities;
-import com.github.lgooddatepicker.zinternaltools.WrapLayout;
-import com.github.lgooddatepicker.zinternaltools.CalendarSelectionEvent;
-import com.github.lgooddatepicker.zinternaltools.DateTimeChangeEvent;
-import com.github.lgooddatepicker.zinternaltools.TimeChangeEvent;
-import com.github.lgooddatepicker.optionalusertools.DateVetoPolicy;
-import com.github.lgooddatepicker.optionalusertools.DateHighlightPolicy;
-import com.github.lgooddatepicker.optionalusertools.TimeChangeListener;
-import com.github.lgooddatepicker.optionalusertools.TimeVetoPolicy;
-import com.github.lgooddatepicker.components.DateTimePicker;
-import com.github.lgooddatepicker.optionalusertools.CalendarBorderProperties;
-import com.github.lgooddatepicker.optionalusertools.DateTimeChangeListener;
-import com.github.lgooddatepicker.components.TimePicker;
-import com.github.lgooddatepicker.components.TimePickerSettings;
-import com.github.lgooddatepicker.components.TimePickerSettings.TimeIncrement;
-import com.privatejgoodies.forms.factories.CC;
+import LGoodDatePicker.com.github.lgooddatepicker.components.DatePickerSettings;
+import LGoodDatePicker.com.github.lgooddatepicker.optionalusertools.DateChangeListener;
+import LGoodDatePicker.com.github.lgooddatepicker.optionalusertools.PickerUtilities;
+import LGoodDatePicker.com.github.lgooddatepicker.zinternaltools.DateChangeEvent;
+import LGoodDatePicker.com.github.lgooddatepicker.zinternaltools.InternalUtilities;
+import LGoodDatePicker.com.github.lgooddatepicker.zinternaltools.WrapLayout;
+import LGoodDatePicker.com.github.lgooddatepicker.zinternaltools.CalendarSelectionEvent;
+import LGoodDatePicker.com.github.lgooddatepicker.zinternaltools.DateTimeChangeEvent;
+import LGoodDatePicker.com.github.lgooddatepicker.zinternaltools.TimeChangeEvent;
+import LGoodDatePicker.com.github.lgooddatepicker.optionalusertools.DateVetoPolicy;
+import LGoodDatePicker.com.github.lgooddatepicker.optionalusertools.DateHighlightPolicy;
+import LGoodDatePicker.com.github.lgooddatepicker.optionalusertools.TimeChangeListener;
+import LGoodDatePicker.com.github.lgooddatepicker.optionalusertools.TimeVetoPolicy;
+import LGoodDatePicker.com.github.lgooddatepicker.components.DateTimePicker;
+import LGoodDatePicker.com.github.lgooddatepicker.optionalusertools.CalendarBorderProperties;
+import LGoodDatePicker.com.github.lgooddatepicker.optionalusertools.DateTimeChangeListener;
+import LGoodDatePicker.com.github.lgooddatepicker.components.TimePicker;
+import LGoodDatePicker.com.github.lgooddatepicker.components.TimePickerSettings;
+import LGoodDatePicker.com.privatejgoodies.forms.factories.CC;
 import javax.swing.border.LineBorder;
-import com.github.lgooddatepicker.zinternaltools.HighlightInformation;
+import LGoodDatePicker.com.github.lgooddatepicker.zinternaltools.HighlightInformation;
 import java.awt.Dimension;
 import java.awt.Image;
 import java.awt.Point;
@@ -50,8 +48,8 @@ import java.time.Month;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import javax.swing.ImageIcon;
-import com.github.lgooddatepicker.optionalusertools.CalendarListener;
-import com.github.lgooddatepicker.zinternaltools.YearMonthChangeEvent;
+import LGoodDatePicker.com.github.lgooddatepicker.optionalusertools.CalendarListener;
+import LGoodDatePicker.com.github.lgooddatepicker.zinternaltools.YearMonthChangeEvent;
 import java.time.YearMonth;
 
 /**
@@ -188,7 +186,7 @@ public class FullDemo {
         // You can replace the example image with any image file that is desired.
         // See also: JButton.setPressedIcon() and JButton.setDisabledIcon().
         // Get the example image icon.
-        URL dateImageURL = FullDemo.class.getResource("/images/datepickerbutton1.png");
+        URL dateImageURL = FullDemo.class.getResource("/LGoodDatePicker/images/datepickerbutton1.png");
         Image dateExampleImage = Toolkit.getDefaultToolkit().getImage(dateImageURL);
         ImageIcon dateExampleIcon = new ImageIcon(dateExampleImage);
         // Create the date picker, and apply the image icon.
@@ -231,15 +229,15 @@ public class FullDemo {
         dateSettings = new DatePickerSettings();
         dateSettings.setWeekNumbersDisplayed(true, true);
         // Set backgrounds:
-        dateSettings.setColor(DateArea.CalendarBackgroundNormalDates, Color.CYAN);
-        dateSettings.setColor(DateArea.BackgroundOverallCalendarPanel, Color.GREEN);
-        dateSettings.setColor(DateArea.BackgroundMonthAndYearMenuLabels, Color.YELLOW);
-        dateSettings.setColor(DateArea.BackgroundTodayLabel, Color.YELLOW);
-        dateSettings.setColor(DateArea.BackgroundClearLabel, Color.YELLOW);
-        dateSettings.setColor(DateArea.BackgroundMonthAndYearNavigationButtons, Color.CYAN);
-        dateSettings.setColor(DateArea.BackgroundTopLeftLabelAboveWeekNumbers, Color.ORANGE);
-        dateSettings.setColor(DateArea.CalendarBackgroundSelectedDate, Color.PINK);
-        dateSettings.setColor(DateArea.CalendarBorderSelectedDate, Color.WHITE);
+        dateSettings.setColor(DatePickerSettings.DateArea.CalendarBackgroundNormalDates, Color.CYAN);
+        dateSettings.setColor(DatePickerSettings.DateArea.BackgroundOverallCalendarPanel, Color.GREEN);
+        dateSettings.setColor(DatePickerSettings.DateArea.BackgroundMonthAndYearMenuLabels, Color.YELLOW);
+        dateSettings.setColor(DatePickerSettings.DateArea.BackgroundTodayLabel, Color.YELLOW);
+        dateSettings.setColor(DatePickerSettings.DateArea.BackgroundClearLabel, Color.YELLOW);
+        dateSettings.setColor(DatePickerSettings.DateArea.BackgroundMonthAndYearNavigationButtons, Color.CYAN);
+        dateSettings.setColor(DatePickerSettings.DateArea.BackgroundTopLeftLabelAboveWeekNumbers, Color.ORANGE);
+        dateSettings.setColor(DatePickerSettings.DateArea.CalendarBackgroundSelectedDate, Color.PINK);
+        dateSettings.setColor(DatePickerSettings.DateArea.CalendarBorderSelectedDate, Color.WHITE);
         dateSettings.setColorBackgroundWeekdayLabels(Color.ORANGE, true);
         dateSettings.setColorBackgroundWeekNumberLabels(Color.ORANGE, true);
         // Set fonts:
@@ -253,13 +251,13 @@ public class FullDemo {
         dateSettings.setFontCalendarWeekdayLabels(smallerFont);
         dateSettings.setFontCalendarWeekNumberLabels(smallerFont);
         // Set text colors:
-        dateSettings.setColor(DateArea.TextMonthAndYearMenuLabels, Color.BLUE);
-        dateSettings.setColor(DateArea.TextMonthAndYearNavigationButtons, Color.BLUE);
-        dateSettings.setColor(DateArea.TextTodayLabel, Color.BLUE);
-        dateSettings.setColor(DateArea.TextClearLabel, Color.BLUE);
-        dateSettings.setColor(DateArea.CalendarTextNormalDates, Color.MAGENTA);
-        dateSettings.setColor(DateArea.CalendarTextWeekdays, Color.RED);
-        dateSettings.setColor(DateArea.CalendarTextWeekNumbers, Color.RED);
+        dateSettings.setColor(DatePickerSettings.DateArea.TextMonthAndYearMenuLabels, Color.BLUE);
+        dateSettings.setColor(DatePickerSettings.DateArea.TextMonthAndYearNavigationButtons, Color.BLUE);
+        dateSettings.setColor(DatePickerSettings.DateArea.TextTodayLabel, Color.BLUE);
+        dateSettings.setColor(DatePickerSettings.DateArea.TextClearLabel, Color.BLUE);
+        dateSettings.setColor(DatePickerSettings.DateArea.CalendarTextNormalDates, Color.MAGENTA);
+        dateSettings.setColor(DatePickerSettings.DateArea.CalendarTextWeekdays, Color.RED);
+        dateSettings.setColor(DatePickerSettings.DateArea.CalendarTextWeekNumbers, Color.RED);
         // Create the date picker. 
         datePicker = new DatePicker(dateSettings);
         panel.panel1.add(datePicker, getConstraints(1, (row * rowMultiplier), 1));
@@ -268,7 +266,7 @@ public class FullDemo {
         // Create a date picker: Custom font.
         dateSettings = new DatePickerSettings();
         dateSettings.setFontValidDate(new Font("Monospaced", Font.ITALIC | Font.BOLD, 17));
-        dateSettings.setColor(DateArea.DatePickerTextValidDate, new Color(0, 100, 0));
+        dateSettings.setColor(DatePickerSettings.DateArea.DatePickerTextValidDate, new Color(0, 100, 0));
         datePicker = new DatePicker(dateSettings);
         datePicker.setDateToToday();
         panel.panel1.add(datePicker, getConstraints(1, (row * rowMultiplier), 1));
@@ -409,7 +407,7 @@ public class FullDemo {
         timeSettings = new TimePickerSettings();
         timeSettings.use24HourClockFormat();
         timeSettings.initialTime = LocalTime.of(15, 30);
-        timeSettings.generatePotentialMenuTimes(TimeIncrement.FifteenMinutes, null, null);
+        timeSettings.generatePotentialMenuTimes(TimePickerSettings.TimeIncrement.FifteenMinutes, null, null);
         timePicker = new TimePicker(timeSettings);
         panel.panel2.add(timePicker, getConstraints(1, (row * rowMultiplier), 1));
         panel.addLabel(panel.panel2, 1, (row++ * rowMultiplier), "Time 5, Interval 15 minutes, and 24 hour clock:");
@@ -426,7 +424,7 @@ public class FullDemo {
         // You can replace the example image with any desired image file.
         // See also: JButton.setPressedIcon() and JButton.setDisabledIcon().
         // Get the example image icon.
-        URL timeIconURL = FullDemo.class.getResource("/images/timepickerbutton1.png");
+        URL timeIconURL = FullDemo.class.getResource("/LGoodDatePicker/images/timepickerbutton1.png");
         Image timeExampleImage = Toolkit.getDefaultToolkit().getImage(timeIconURL);
         ImageIcon timeExampleIcon = new ImageIcon(timeExampleImage);
         // Create the time picker, and apply the image icon.
@@ -498,7 +496,7 @@ public class FullDemo {
         timeSettings.setFormatForDisplayTime("ha");
         timeSettings.setFormatForMenuTimes("ha");
         timeSettings.initialTime = LocalTime.of(15, 00);
-        timeSettings.generatePotentialMenuTimes(TimeIncrement.OneHour, null, null);
+        timeSettings.generatePotentialMenuTimes(TimePickerSettings.TimeIncrement.OneHour, null, null);
         timePicker = new TimePicker(timeSettings);
         panel.panel2.add(timePicker, getConstraints(1, (row * rowMultiplier), 1));
         panel.addLabel(panel.panel2, 1, (row++ * rowMultiplier), "Time 11, Custom Format:");

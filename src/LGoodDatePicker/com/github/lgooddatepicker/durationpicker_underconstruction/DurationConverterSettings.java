@@ -1,6 +1,7 @@
-package com.github.lgooddatepicker.durationpicker_underconstruction;
+package LGoodDatePicker.com.github.lgooddatepicker.durationpicker_underconstruction;
 
-import com.github.lgooddatepicker.zinternaltools.TranslationSource;
+import LGoodDatePicker.com.github.lgooddatepicker.zinternaltools.TranslationSource;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;

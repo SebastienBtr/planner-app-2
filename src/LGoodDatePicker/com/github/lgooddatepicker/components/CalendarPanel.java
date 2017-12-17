@@ -1,28 +1,28 @@
-package com.github.lgooddatepicker.components;
+package LGoodDatePicker.com.github.lgooddatepicker.components;
 
 import java.time.*;
-import com.privatejgoodies.forms.layout.FormLayout;
-import com.privatejgoodies.forms.factories.CC;
-import com.github.lgooddatepicker.components.DatePickerSettings.DateArea;
-import com.github.lgooddatepicker.optionalusertools.CalendarBorderProperties;
+import LGoodDatePicker.com.privatejgoodies.forms.layout.FormLayout;
+import LGoodDatePicker.com.privatejgoodies.forms.factories.CC;
+import LGoodDatePicker.com.github.lgooddatepicker.components.DatePickerSettings.DateArea;
+import LGoodDatePicker.com.github.lgooddatepicker.optionalusertools.CalendarBorderProperties;
 import java.awt.*;
 import java.awt.event.*;
 import java.util.*;
 import javax.swing.*;
 import javax.swing.border.*;
 import java.text.DateFormatSymbols;
-import com.github.lgooddatepicker.optionalusertools.DateVetoPolicy;
-import com.github.lgooddatepicker.optionalusertools.DateHighlightPolicy;
-import com.github.lgooddatepicker.zinternaltools.CalendarSelectionEvent;
-import com.github.lgooddatepicker.zinternaltools.InternalUtilities;
-import com.github.lgooddatepicker.zinternaltools.JIntegerTextField;
-import com.github.lgooddatepicker.zinternaltools.JIntegerTextField.IntegerTextFieldNumberChangeListener;
-import com.github.lgooddatepicker.zinternaltools.MouseLiberalAdapter;
-import com.github.lgooddatepicker.zinternaltools.HighlightInformation;
-import com.privatejgoodies.forms.layout.CellConstraints;
+import LGoodDatePicker.com.github.lgooddatepicker.optionalusertools.DateVetoPolicy;
+import LGoodDatePicker.com.github.lgooddatepicker.optionalusertools.DateHighlightPolicy;
+import LGoodDatePicker.com.github.lgooddatepicker.zinternaltools.CalendarSelectionEvent;
+import LGoodDatePicker.com.github.lgooddatepicker.zinternaltools.InternalUtilities;
+import LGoodDatePicker.com.github.lgooddatepicker.zinternaltools.JIntegerTextField;
+import LGoodDatePicker.com.github.lgooddatepicker.zinternaltools.JIntegerTextField.IntegerTextFieldNumberChangeListener;
+import LGoodDatePicker.com.github.lgooddatepicker.zinternaltools.MouseLiberalAdapter;
+import LGoodDatePicker.com.github.lgooddatepicker.zinternaltools.HighlightInformation;
+import LGoodDatePicker.com.privatejgoodies.forms.layout.CellConstraints;
 import java.time.temporal.WeekFields;
-import com.github.lgooddatepicker.optionalusertools.CalendarListener;
-import com.github.lgooddatepicker.zinternaltools.YearMonthChangeEvent;
+import LGoodDatePicker.com.github.lgooddatepicker.optionalusertools.CalendarListener;
+import LGoodDatePicker.com.github.lgooddatepicker.zinternaltools.YearMonthChangeEvent;
 
 /**
  * CalendarPanel,
@@ -819,7 +819,7 @@ public class CalendarPanel extends JPanel {
                 vetoPolicy, LocalDate.now());
         labelSetDateToToday.setEnabled(!todayIsVetoed);
 
-        // Set the visibility of all the calendar control buttons (and button labels).
+        // Set the visibility of all the calendar controle buttons (and button labels).
         zApplyVisibilityOfButtons();
 
         // Set the label for the clear button.

@@ -1,6 +1,7 @@
-package com.github.lgooddatepicker.zinternaltools;
+package LGoodDatePicker.com.github.lgooddatepicker.zinternaltools;
 
-import com.github.lgooddatepicker.components.TimePicker;
+import LGoodDatePicker.com.github.lgooddatepicker.components.TimePicker;
+
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.Timer;

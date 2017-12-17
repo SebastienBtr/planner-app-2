@@ -27,10 +27,10 @@
  * OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
  * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-package com.privatejgoodies.forms.layout;
+package LGoodDatePicker.com.privatejgoodies.forms.layout;
 
-import static com.privatejgoodies.common.base.Preconditions.checkArgument;
-import static com.privatejgoodies.common.base.Preconditions.checkNotNull;
+import static LGoodDatePicker.com.privatejgoodies.common.base.Preconditions.checkArgument;
+import static LGoodDatePicker.com.privatejgoodies.common.base.Preconditions.checkNotNull;
 
 import java.awt.Component;
 import java.awt.Insets;
@@ -39,7 +39,8 @@ import java.io.Serializable;
 import java.util.Locale;
 import java.util.StringTokenizer;
 
-import com.privatejgoodies.forms.factories.CC;
+import LGoodDatePicker.com.privatejgoodies.common.base.Preconditions;
+import LGoodDatePicker.com.privatejgoodies.forms.factories.CC;
 
 /**
  * Defines constraints for components that are laid out with the FormLayout. Defines the components
@@ -311,8 +312,8 @@ public final class CellConstraints implements Cloneable, Serializable {
         if (gridHeight <= 0) {
             throw new IndexOutOfBoundsException("The grid height must be a positive number.");
         }
-        checkNotNull(hAlign, "The horizontal alignment must not be null.");
-        checkNotNull(vAlign, "The vertical alignment must not be null.");
+        Preconditions.checkNotNull(hAlign, "The horizontal alignment must not be null.");
+        Preconditions.checkNotNull(vAlign, "The vertical alignment must not be null.");
         ensureValidOrientations(hAlign, vAlign);
     }
 
@@ -764,18 +765,18 @@ public final class CellConstraints implements Cloneable, Serializable {
     private void initFromConstraints(String encodedConstraints) {
         StringTokenizer tokenizer = new StringTokenizer(encodedConstraints, " ,");
         int argCount = tokenizer.countTokens();
-        checkArgument(argCount == 2 || argCount == 4 || argCount == 6,
+        Preconditions.checkArgument(argCount == 2 || argCount == 4 || argCount == 6,
                 "You must provide 2, 4 or 6 arguments.");
         Integer nextInt = decodeInt(tokenizer.nextToken());
-        checkArgument(nextInt != null,
+        Preconditions.checkArgument(nextInt != null,
                 "First cell constraint element must be a number.");
         gridX = nextInt.intValue();
-        checkArgument(gridX > 0, "The grid x must be a positive number.");
+        Preconditions.checkArgument(gridX > 0, "The grid x must be a positive number.");
         nextInt = decodeInt(tokenizer.nextToken());
-        checkArgument(nextInt != null,
+        Preconditions.checkArgument(nextInt != null,
                 "Second cell constraint element must be a number.");
         gridY = nextInt.intValue();
-        checkArgument(gridY > 0, "The grid y must be a positive number.");
+        Preconditions.checkArgument(gridY > 0, "The grid y must be a positive number.");
         if (!tokenizer.hasMoreTokens()) {
             return;
         }

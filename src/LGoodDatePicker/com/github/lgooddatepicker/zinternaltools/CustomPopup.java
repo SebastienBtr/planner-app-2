@@ -1,4 +1,4 @@
-package com.github.lgooddatepicker.zinternaltools;
+package LGoodDatePicker.com.github.lgooddatepicker.zinternaltools;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
@@ -26,7 +26,7 @@ import javax.swing.border.Border;
 import javax.swing.border.LineBorder;
 
 /**
- * CustomPopup, This is a custom popup class, which provides a fine level of control over when the
+ * CustomPopup, This is a custom popup class, which provides a fine level of controle over when the
  * popup opens and closes. This was created to overcome particular shortcomings of the JPopupMenu
  * class.
  *

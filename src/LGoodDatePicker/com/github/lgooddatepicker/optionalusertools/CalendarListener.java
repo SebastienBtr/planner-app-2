@@ -1,7 +1,7 @@
-package com.github.lgooddatepicker.optionalusertools;
+package LGoodDatePicker.com.github.lgooddatepicker.optionalusertools;
 
-import com.github.lgooddatepicker.zinternaltools.CalendarSelectionEvent;
-import com.github.lgooddatepicker.zinternaltools.YearMonthChangeEvent;
+import LGoodDatePicker.com.github.lgooddatepicker.zinternaltools.YearMonthChangeEvent;
+import LGoodDatePicker.com.github.lgooddatepicker.zinternaltools.CalendarSelectionEvent;
 
 /**
  * CalendarListener, This interface can be implemented to create a calendar listener. Any calendar

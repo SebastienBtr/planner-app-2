@@ -1,4 +1,4 @@
-package com.github.lgooddatepicker.zinternaltools;
+package LGoodDatePicker.com.github.lgooddatepicker.zinternaltools;
 
 import java.awt.*;
 import javax.swing.JScrollPane;

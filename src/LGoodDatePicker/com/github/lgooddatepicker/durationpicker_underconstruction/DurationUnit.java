@@ -1,4 +1,4 @@
-package com.github.lgooddatepicker.durationpicker_underconstruction;
+package LGoodDatePicker.com.github.lgooddatepicker.durationpicker_underconstruction;
 
 import java.time.temporal.ChronoUnit;
 

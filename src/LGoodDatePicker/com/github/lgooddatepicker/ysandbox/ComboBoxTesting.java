@@ -1,7 +1,7 @@
-package com.github.lgooddatepicker.ysandbox;
+package LGoodDatePicker.com.github.lgooddatepicker.ysandbox;
 
-import com.privatejgoodies.forms.layout.FormLayout;
-import com.privatejgoodies.forms.factories.CC;
+import LGoodDatePicker.com.privatejgoodies.forms.layout.FormLayout;
+import LGoodDatePicker.com.privatejgoodies.forms.factories.CC;
 import java.awt.Color;
 import java.awt.Font;
 import javax.swing.*;

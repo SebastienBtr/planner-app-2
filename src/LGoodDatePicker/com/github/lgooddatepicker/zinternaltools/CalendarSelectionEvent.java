@@ -1,7 +1,7 @@
-package com.github.lgooddatepicker.zinternaltools;
+package LGoodDatePicker.com.github.lgooddatepicker.zinternaltools;
 
-import com.github.lgooddatepicker.components.CalendarPanel;
-import com.github.lgooddatepicker.optionalusertools.PickerUtilities;
+import LGoodDatePicker.com.github.lgooddatepicker.components.CalendarPanel;
+import LGoodDatePicker.com.github.lgooddatepicker.optionalusertools.PickerUtilities;
 import java.time.LocalDate;
 
 /**

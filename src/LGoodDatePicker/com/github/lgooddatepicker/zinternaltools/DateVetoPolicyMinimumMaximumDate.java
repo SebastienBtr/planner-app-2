@@ -1,7 +1,8 @@
-package com.github.lgooddatepicker.zinternaltools;
+package LGoodDatePicker.com.github.lgooddatepicker.zinternaltools;
 
-import com.github.lgooddatepicker.optionalusertools.DateInterval;
-import com.github.lgooddatepicker.optionalusertools.DateVetoPolicy;
+import LGoodDatePicker.com.github.lgooddatepicker.optionalusertools.DateInterval;
+import LGoodDatePicker.com.github.lgooddatepicker.optionalusertools.DateVetoPolicy;
+
 import java.time.LocalDate;
 
 /**

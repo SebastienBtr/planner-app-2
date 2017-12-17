@@ -1,11 +1,12 @@
-package com.github.lgooddatepicker.zinternaltools;
+package LGoodDatePicker.com.github.lgooddatepicker.zinternaltools;
 
-import com.privatejgoodies.forms.layout.FormLayout;
-import com.privatejgoodies.forms.factories.CC;
+import LGoodDatePicker.com.github.lgooddatepicker.components.TimePicker;
+import LGoodDatePicker.com.github.lgooddatepicker.optionalusertools.TimeVetoPolicy;
+import LGoodDatePicker.com.privatejgoodies.forms.layout.FormLayout;
+import LGoodDatePicker.com.privatejgoodies.forms.factories.CC;
 import javax.swing.*;
-import com.github.lgooddatepicker.optionalusertools.TimeVetoPolicy;
-import com.github.lgooddatepicker.components.TimePicker;
-import com.github.lgooddatepicker.components.TimePickerSettings;
+
+import LGoodDatePicker.com.github.lgooddatepicker.components.TimePickerSettings;
 import java.awt.MouseInfo;
 import java.awt.Point;
 import java.awt.Rectangle;

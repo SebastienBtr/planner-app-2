@@ -1,6 +1,6 @@
-package com.github.lgooddatepicker.optionalusertools;
+package LGoodDatePicker.com.github.lgooddatepicker.optionalusertools;
 
-import com.github.lgooddatepicker.zinternaltools.TimeChangeEvent;
+import LGoodDatePicker.com.github.lgooddatepicker.zinternaltools.TimeChangeEvent;
 
 /**
  * TimeChangeListener, This interface can be implemented to create a time change listener. Any time

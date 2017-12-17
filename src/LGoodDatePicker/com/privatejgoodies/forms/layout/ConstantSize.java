@@ -27,9 +27,12 @@
  * OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
  * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-package com.privatejgoodies.forms.layout;
+package LGoodDatePicker.com.privatejgoodies.forms.layout;
 
-import static com.privatejgoodies.common.base.Preconditions.checkArgument;
+import LGoodDatePicker.com.privatejgoodies.common.base.Preconditions;
+import LGoodDatePicker.com.privatejgoodies.forms.util.LayoutStyle;
+
+import static LGoodDatePicker.com.privatejgoodies.common.base.Preconditions.checkArgument;
 
 import java.awt.Component;
 import java.awt.Container;
@@ -41,7 +44,7 @@ import java.util.List;
  * value and unit, for example: 10&nbsp;pixel, 15&nbsp;point or 4&nbsp;dialog units. You can get
  * instances of {@code ConstantSize} using the factory methods and constants in the {@link Sizes}
  * class. Logical constant sizes that vary with the current layout style are delivered by the
- * {@link com.privatejgoodies.forms.util.LayoutStyle} class.<p>
+ * {@link LayoutStyle} class.<p>
  *
  * This class supports different size units:
  * <table>
@@ -142,7 +145,7 @@ public final class ConstantSize implements Size, Serializable {
         Unit unit = Unit.valueOf(encodedUnit, horizontal);
         double value = Double.parseDouble(encodedValue);
         if (unit.requiresIntegers) {
-            checkArgument(value == (int) value,
+            Preconditions.checkArgument(value == (int) value,
                     "%s value %s must be an integer.", unit, encodedValue);
         }
         return new ConstantSize(value, unit);
@@ -223,7 +226,7 @@ public final class ConstantSize implements Size, Serializable {
      * Returns this size as pixel size. Neither requires the component list nor the specified
      * measures.<p>
      *
-     * Invoked by {@link com.privatejgoodies.forms.layout.FormSpec} to determine the size of a
+     * Invoked by {@link FormSpec} to determine the size of a
      * column or row.
      *
      * @param container the layout container

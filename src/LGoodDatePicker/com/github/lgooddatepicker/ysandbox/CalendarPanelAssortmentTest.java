@@ -1,12 +1,12 @@
-package com.github.lgooddatepicker.ysandbox;
+package LGoodDatePicker.com.github.lgooddatepicker.ysandbox;
 
-import com.github.lgooddatepicker.components.CalendarPanel;
-import com.github.lgooddatepicker.components.DatePickerSettings;
-import com.github.lgooddatepicker.components.DatePickerSettings.DateArea;
-import com.github.lgooddatepicker.optionalusertools.CalendarBorderProperties;
-import com.github.lgooddatepicker.optionalusertools.DateHighlightPolicy;
-import com.github.lgooddatepicker.optionalusertools.DateVetoPolicy;
-import com.github.lgooddatepicker.zinternaltools.HighlightInformation;
+import LGoodDatePicker.com.github.lgooddatepicker.components.CalendarPanel;
+import LGoodDatePicker.com.github.lgooddatepicker.components.DatePickerSettings;
+import LGoodDatePicker.com.github.lgooddatepicker.optionalusertools.CalendarBorderProperties;
+import LGoodDatePicker.com.github.lgooddatepicker.optionalusertools.DateHighlightPolicy;
+import LGoodDatePicker.com.github.lgooddatepicker.optionalusertools.DateVetoPolicy;
+import LGoodDatePicker.com.github.lgooddatepicker.zinternaltools.HighlightInformation;
+
 import java.awt.Color;
 import java.awt.GraphicsEnvironment;
 import java.awt.Point;
@@ -83,14 +83,14 @@ public class CalendarPanelAssortmentTest {
 
         // Create a CalendarPanel: Custom color.
         dateSettings = new DatePickerSettings();
-        dateSettings.setColor(DateArea.BackgroundOverallCalendarPanel, Color.BLUE);
+        dateSettings.setColor(DatePickerSettings.DateArea.BackgroundOverallCalendarPanel, Color.BLUE);
         dateSettings.setColorBackgroundWeekdayLabels(Color.PINK, true);
         dateSettings.setColorBackgroundWeekNumberLabels(Color.PINK, true);
-        dateSettings.setColor(DateArea.BackgroundTopLeftLabelAboveWeekNumbers, Color.PINK);
-        dateSettings.setColor(DateArea.BackgroundMonthAndYearMenuLabels, Color.ORANGE);
-        dateSettings.setColor(DateArea.BackgroundTodayLabel, Color.CYAN);
-        dateSettings.setColor(DateArea.BackgroundClearLabel, Color.GREEN);
-        dateSettings.setColor(DateArea.BackgroundMonthAndYearNavigationButtons, Color.MAGENTA);
+        dateSettings.setColor(DatePickerSettings.DateArea.BackgroundTopLeftLabelAboveWeekNumbers, Color.PINK);
+        dateSettings.setColor(DatePickerSettings.DateArea.BackgroundMonthAndYearMenuLabels, Color.ORANGE);
+        dateSettings.setColor(DatePickerSettings.DateArea.BackgroundTodayLabel, Color.CYAN);
+        dateSettings.setColor(DatePickerSettings.DateArea.BackgroundClearLabel, Color.GREEN);
+        dateSettings.setColor(DatePickerSettings.DateArea.BackgroundMonthAndYearNavigationButtons, Color.MAGENTA);
         dateSettings.setWeekNumbersDisplayed(true, true);
         calendarPanel = new CalendarPanel(dateSettings);
         panel.add(calendarPanel);
@@ -211,14 +211,14 @@ public class CalendarPanelAssortmentTest {
         dateSettings = new DatePickerSettings();
         dateSettings.setWeekNumbersDisplayed(true, true);
         calendarPanel = new CalendarPanel(dateSettings);
-        dateSettings.setColor(DateArea.BackgroundOverallCalendarPanel, Color.BLUE);
+        dateSettings.setColor(DatePickerSettings.DateArea.BackgroundOverallCalendarPanel, Color.BLUE);
         dateSettings.setColorBackgroundWeekdayLabels(Color.PINK, true);
         dateSettings.setColorBackgroundWeekNumberLabels(Color.PINK, true);
-        dateSettings.setColor(DateArea.BackgroundTopLeftLabelAboveWeekNumbers, Color.PINK);
-        dateSettings.setColor(DateArea.BackgroundMonthAndYearMenuLabels, Color.ORANGE);
-        dateSettings.setColor(DateArea.BackgroundTodayLabel, Color.CYAN);
-        dateSettings.setColor(DateArea.BackgroundClearLabel, Color.GREEN);
-        dateSettings.setColor(DateArea.BackgroundMonthAndYearNavigationButtons, Color.MAGENTA);
+        dateSettings.setColor(DatePickerSettings.DateArea.BackgroundTopLeftLabelAboveWeekNumbers, Color.PINK);
+        dateSettings.setColor(DatePickerSettings.DateArea.BackgroundMonthAndYearMenuLabels, Color.ORANGE);
+        dateSettings.setColor(DatePickerSettings.DateArea.BackgroundTodayLabel, Color.CYAN);
+        dateSettings.setColor(DatePickerSettings.DateArea.BackgroundClearLabel, Color.GREEN);
+        dateSettings.setColor(DatePickerSettings.DateArea.BackgroundMonthAndYearNavigationButtons, Color.MAGENTA);
         panel.add(calendarPanel);
 
         // Create a CalendarPanel: Change first weekday.

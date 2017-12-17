@@ -27,10 +27,12 @@
  * OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
  * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-package com.privatejgoodies.common.internal;
+package LGoodDatePicker.com.privatejgoodies.common.internal;
 
-import static com.privatejgoodies.common.base.Preconditions.checkNotNull;
-import static com.privatejgoodies.common.internal.Messages.MUST_NOT_BE_NULL;
+import LGoodDatePicker.com.privatejgoodies.common.base.Preconditions;
+
+import static LGoodDatePicker.com.privatejgoodies.common.base.Preconditions.checkNotNull;
+import static LGoodDatePicker.com.privatejgoodies.common.internal.Messages.MUST_NOT_BE_NULL;
 
 import java.util.MissingResourceException;
 import java.util.ResourceBundle;
@@ -51,7 +53,7 @@ public final class ResourceBundleLocalizer implements StringLocalizer {
 
     // Instance Creation ******************************************************
     public ResourceBundleLocalizer(ResourceBundle bundle) {
-        this.bundle = checkNotNull(bundle, MUST_NOT_BE_NULL, "resource bundle");
+        this.bundle = Preconditions.checkNotNull(bundle, MUST_NOT_BE_NULL, "resource bundle");
     }
 
     // StringLocalizer Implementation *****************************************

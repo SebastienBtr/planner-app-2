@@ -27,7 +27,7 @@
  * OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
  * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-package com.privatejgoodies.forms.layout;
+package LGoodDatePicker.com.privatejgoodies.forms.layout;
 
 import java.awt.Component;
 import java.awt.Container;
@@ -36,9 +36,9 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Locale;
 
-import com.privatejgoodies.forms.layout.ConstantSize.Unit;
-import com.privatejgoodies.forms.util.DefaultUnitConverter;
-import com.privatejgoodies.forms.util.UnitConverter;
+import LGoodDatePicker.com.privatejgoodies.forms.util.DefaultUnitConverter;
+import LGoodDatePicker.com.privatejgoodies.forms.util.UnitConverter;
+import LGoodDatePicker.com.privatejgoodies.forms.layout.ConstantSize.Unit;
 
 /**
  * Consists only of static methods that create and convert sizes as required by the FormLayout. The

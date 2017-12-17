@@ -1,19 +1,19 @@
-package com.github.lgooddatepicker.components;
+package LGoodDatePicker.com.github.lgooddatepicker.components;
 
-import com.privatejgoodies.forms.layout.FormLayout;
-import com.privatejgoodies.forms.factories.CC;
-import com.github.lgooddatepicker.zinternaltools.TimeMenuPanel;
-import com.github.lgooddatepicker.components.TimePickerSettings.TimeArea;
+import LGoodDatePicker.com.github.lgooddatepicker.zinternaltools.CalculateMinimumTimeFieldSize;
+import LGoodDatePicker.com.github.lgooddatepicker.zinternaltools.CustomPopup;
+import LGoodDatePicker.com.privatejgoodies.forms.layout.FormLayout;
+import LGoodDatePicker.com.privatejgoodies.forms.factories.CC;
+import LGoodDatePicker.com.github.lgooddatepicker.zinternaltools.TimeMenuPanel;
+import LGoodDatePicker.com.github.lgooddatepicker.components.TimePickerSettings.TimeArea;
 import java.awt.*;
 import javax.swing.border.*;
-import com.github.lgooddatepicker.optionalusertools.PickerUtilities;
-import com.github.lgooddatepicker.optionalusertools.TimeChangeListener;
-import com.github.lgooddatepicker.optionalusertools.TimeVetoPolicy;
-import com.github.lgooddatepicker.zinternaltools.CalculateMinimumTimeFieldSize;
-import com.github.lgooddatepicker.zinternaltools.CustomPopup;
-import com.github.lgooddatepicker.zinternaltools.InternalUtilities;
-import com.github.lgooddatepicker.zinternaltools.TimeChangeEvent;
-import com.github.lgooddatepicker.zinternaltools.TimeSpinnerTimer;
+import LGoodDatePicker.com.github.lgooddatepicker.optionalusertools.PickerUtilities;
+import LGoodDatePicker.com.github.lgooddatepicker.optionalusertools.TimeChangeListener;
+import LGoodDatePicker.com.github.lgooddatepicker.optionalusertools.TimeVetoPolicy;
+import LGoodDatePicker.com.github.lgooddatepicker.zinternaltools.InternalUtilities;
+import LGoodDatePicker.com.github.lgooddatepicker.zinternaltools.TimeChangeEvent;
+import LGoodDatePicker.com.github.lgooddatepicker.zinternaltools.TimeSpinnerTimer;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Insets;
@@ -93,7 +93,7 @@ public class TimePicker
 
     /**
      * popup, This is the custom popup instance for this time picker. This should remain null until
-     * a popup is opened. Creating a custom popup class allowed us to control the details of when
+     * a popup is opened. Creating a custom popup class allowed us to controle the details of when
      * the popup menu should be open or closed.
      */
     private CustomPopup popup = null;
@@ -973,7 +973,7 @@ public class TimePicker
      * any other tasks besides those described here.
      */
     private void zInternalSetLastValidTimeAndNotifyListeners(LocalTime newTime) {
-        LocalTime oldTime = lastValidTime;
+        LocalTime oldTime = newTime.plusHours(1);
         lastValidTime = newTime;
         if (!PickerUtilities.isSameLocalTime(oldTime, newTime)) {
             for (TimeChangeListener timeChangeListener : timeChangeListeners) {

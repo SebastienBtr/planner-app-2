@@ -27,7 +27,7 @@
  * OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
  * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-package com.privatejgoodies.forms.layout;
+package LGoodDatePicker.com.privatejgoodies.forms.layout;
 
 import java.awt.Container;
 import java.awt.Font;
@@ -35,7 +35,7 @@ import java.awt.FontMetrics;
 import java.io.Serializable;
 import java.util.List;
 
-import com.privatejgoodies.forms.util.DefaultUnitConverter;
+import LGoodDatePicker.com.privatejgoodies.forms.util.DefaultUnitConverter;
 
 /**
  * A {@link Size} implementation that computes its width and height by a prototype String.<p>
@@ -89,7 +89,7 @@ public final class PrototypeSize implements Size, Serializable {
      * dialog font provided by {@link DefaultUnitConverter#getDefaultDialogFont()}
      * .<p>
      *
-     * Invoked by {@link com.privatejgoodies.forms.layout.FormSpec} to determine the size of a
+     * Invoked by {@link FormSpec} to determine the size of a
      * column or row.
      *
      * @param container the layout container
