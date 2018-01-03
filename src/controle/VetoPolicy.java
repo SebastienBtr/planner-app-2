@@ -37,10 +37,6 @@ public class VetoPolicy {
                 return false;
             }
 
-            if ((date.getDayOfWeek() == DayOfWeek.SATURDAY) || (date.getDayOfWeek() == DayOfWeek.SUNDAY)) {
-                return false;
-            }
-
             return true;
         }
     }

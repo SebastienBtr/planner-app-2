@@ -4,28 +4,28 @@ import java.time.LocalDateTime;
 import java.util.HashMap;
 import java.util.LinkedList;
 
-public class Posibilite {
+public class Possibilite {
 
     private LocalDateTime debut;
     private LocalDateTime fin;
     private HashMap<String,LinkedList<Personne>> personneDispo;
 
 
-    public Posibilite(LocalDateTime debut, LocalDateTime fin, HashMap<String, LinkedList<Personne>> personneDispo) {
+    public Possibilite(LocalDateTime debut, LocalDateTime fin, HashMap<String, LinkedList<Personne>> personneDispo) {
         this.debut = debut;
         this.fin = fin;
         this.personneDispo = personneDispo;
     }
 
     //a.concat(b) != b.concat(a)
-    public Posibilite concat(Posibilite posibilite) {
+    public Possibilite concat(Possibilite possibilite) {
         //TODO verif param is after this
 
         LinkedList<Personne> potentiellementLibres = new LinkedList<>();
         LinkedList<Personne> indisponibles = personneDispo.get("indisponibles");
 
         for (Personne p : personneDispo.get("disponibles")) {
-            if (posibilite.personneDispo.get("disponibles").contains(p)) {
+            if (possibilite.personneDispo.get("disponibles").contains(p)) {
                 potentiellementLibres.add(p);
             }
             else {
@@ -37,12 +37,12 @@ public class Posibilite {
         newPersonneDispo.put("disponibles",potentiellementLibres);
         newPersonneDispo.put("indisponibles",indisponibles);
 
-        return new Posibilite(debut,posibilite.fin,newPersonneDispo);
+        return new Possibilite(debut, possibilite.fin,newPersonneDispo);
     }
 
-    public boolean estEgal(Posibilite posibilite) {
+    public boolean estEgal(Possibilite possibilite) {
 
-        if (personneDispo.get("disponibles").size() == posibilite.personneDispo.get("disponibles").size()) {
+        if (personneDispo.get("disponibles").size() == possibilite.personneDispo.get("disponibles").size()) {
             return true;
         }
         return false;

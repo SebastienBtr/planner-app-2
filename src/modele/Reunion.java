@@ -17,11 +17,11 @@ public class Reunion extends Observable {
     private LocalDateTime debutPlage;
     private LocalDateTime finPlage;
     private LinkedList<Personne> personnes;
-    private ArrayList<Posibilite> posibilites;
+    private ArrayList<Possibilite> possibilites;
 
     public Reunion() {
         personnes = new LinkedList<>();
-        posibilites = new ArrayList<>();
+        possibilites = new ArrayList<>();
     }
 
     public int getDuree() {
@@ -65,12 +65,12 @@ public class Reunion extends Observable {
         this.notifyObservers(CHANGEMENT_PERSONNES); // PAC
     }
 
-    public ArrayList<Posibilite> getPosibilites() {
-        return posibilites;
+    public ArrayList<Possibilite> getPossibilites() {
+        return possibilites;
     }
 
-    public void setPosibilites(ArrayList<Posibilite> posibilites) {
-        this.posibilites = posibilites;
+    public void setPossibilites(ArrayList<Possibilite> possibilites) {
+        this.possibilites = possibilites;
         this.setChanged();                    // PAC
         this.notifyObservers(CHANGEMENT_POSSIBILITES); // PAC
     }

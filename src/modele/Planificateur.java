@@ -62,48 +62,48 @@ public class Planificateur {
 		return personnesResultat;
 	}
 
-	public ArrayList<Posibilite>
+	public ArrayList<Possibilite>
     getPosibilite(LinkedList<Personne> personnes, int duree, LocalDateTime debutPlage, LocalDateTime finPlage ) {
 
         if (!correctParam(personnes, duree, debutPlage, finPlage)) {
             throw new IllegalArgumentException();
         }
 
-        ArrayList<Posibilite> posibilites = new ArrayList<>();
+        ArrayList<Possibilite> possibilites = new ArrayList<>();
         int i = 0;
 
         while (!debutPlage.isEqual(finPlage)) {
 
-            Posibilite newPosibilite = null;
+            Possibilite newPossibilite = null;
             int creneau = 0;
 
             while (creneau != duree) {
 
-                Posibilite tmpPosibilite = new Posibilite(debutPlage,debutPlage.plusMinutes(15),
+                Possibilite tmpPossibilite = new Possibilite(debutPlage,debutPlage.plusMinutes(15),
                         getPersonnesDispo(personnes,debutPlage.toLocalDate(),debutPlage.plusHours((int)((debutPlage.getMinute() + creneau)/60)).getHour(),debutPlage.plusMinutes(creneau).getMinute()));
 
-                if (newPosibilite != null) {
-                    newPosibilite = newPosibilite.concat(tmpPosibilite);
+                if (newPossibilite != null) {
+                    newPossibilite = newPossibilite.concat(tmpPossibilite);
                 }
                 else {
-                    newPosibilite = tmpPosibilite;
+                    newPossibilite = tmpPossibilite;
                 }
                 creneau += 15;
             }
 
-            if (i > 0 && posibilites.get(posibilites.size()-1).estEgal(newPosibilite)) {
-                newPosibilite = posibilites.get(posibilites.size()-1).concat(newPosibilite);
-                posibilites.set(posibilites.size()-1,newPosibilite);
+            if (i > 0 && possibilites.get(possibilites.size()-1).estEgal(newPossibilite)) {
+                newPossibilite = possibilites.get(possibilites.size()-1).concat(newPossibilite);
+                possibilites.set(possibilites.size()-1, newPossibilite);
             }
             else {
-                posibilites.add(newPosibilite);
+                possibilites.add(newPossibilite);
             }
 
             debutPlage = incrementDate(debutPlage,duree);
             i++;
         }
 
-        return posibilites;
+        return possibilites;
     }
 
     private boolean correctParam(LinkedList<Personne> personnes, int duree, LocalDateTime debutPlage, LocalDateTime finPlage) {
@@ -113,10 +113,13 @@ public class Planificateur {
 
     private LocalDateTime incrementDate(LocalDateTime date, int duree) {
         LocalTime time = LocalTime.of(20,00);
+        int heures = (int)(duree / 60);
+        int minutes = duree - 60*heures;
+        time = time.minusHours(heures);
+        time = time.minusMinutes(minutes);
         LocalDateTime limitTime = LocalDateTime.of(date.toLocalDate(), time);
 
         if (date.plusMinutes(15).isAfter(limitTime)) {
-
             LocalTime heureDebutJournee = LocalTime.of(8,00);
             LocalDateTime newDate = LocalDateTime.of(date.toLocalDate().plusDays(1),heureDebutJournee);
             return newDate;

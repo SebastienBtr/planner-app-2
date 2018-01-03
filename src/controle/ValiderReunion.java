@@ -11,20 +11,20 @@ import java.util.Observer;
 
 public class ValiderReunion implements ActionListener, Observer {
 
-    private Planificateur modele;
+    private Planificateur planificateur;
     private Reunion reunion;
     private JButton button;
 
-    public ValiderReunion(Planificateur modele, Reunion reunion, JButton validate) {
-        this.modele = modele;
+    public ValiderReunion(Planificateur planificateur, Reunion reunion, JButton validate) {
+        this.planificateur = planificateur;
         this.reunion = reunion;
         this.button = validate;
     }
 
     @Override
     public void actionPerformed(ActionEvent actionEvent) {
-        reunion.setPosibilites(
-                modele.getPosibilite(
+        reunion.setPossibilites(
+                planificateur.getPosibilite(
                         reunion.getPersonnes(),reunion.getDuree(),reunion.getDebutPlage(),reunion.getFinPlage()));
     }
 
