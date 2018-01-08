@@ -10,16 +10,25 @@ public class Possibilite {
     private LocalDateTime fin;
     private HashMap<String,LinkedList<Personne>> personneDispo;
 
-
+    /**
+     * Créé une possibilite, qui est une plage dans laquelle la réunion peut commencer
+     * @param debut la date de debut de la possibilite
+     * @param fin la date de fin de la possibilite
+     * @param personneDispo les personnes dispo est indispo pour cette possibilite
+     */
     public Possibilite(LocalDateTime debut, LocalDateTime fin, HashMap<String, LinkedList<Personne>> personneDispo) {
         this.debut = debut;
         this.fin = fin;
         this.personneDispo = personneDispo;
     }
 
-    //a.concat(b) != b.concat(a)
+    /**
+     * Methode pour concaténer deux possibilités, attention a.concat(b) != b.concat(a)
+     * @param possibilite la possibilte à concaténer avec this
+     * @return la nouvelle possibilite créé
+     */
     public Possibilite concat(Possibilite possibilite) {
-        //TODO verif param is after this
+        //TODO verif que possibilite est après this
 
         LinkedList<Personne> potentiellementLibres = new LinkedList<>();
         LinkedList<Personne> indisponibles = personneDispo.get("indisponibles");
@@ -40,6 +49,12 @@ public class Possibilite {
         return new Possibilite(debut, possibilite.fin,newPersonneDispo);
     }
 
+    /**
+     * Vérifie si deux possibilite sont égales, elles le sont si le nombre de personne dispo
+     * est égal au nombre de personnes indispo
+     * @param possibilite le possibilte à comparer
+     * @return true si les possibilités sont égales
+     */
     public boolean estEgal(Possibilite possibilite) {
 
         if (personneDispo.get("disponibles").size() == possibilite.personneDispo.get("disponibles").size()) {

@@ -14,6 +14,9 @@ public class Planificateur {
 	private LinkedList<Personne> personnes;
 	private EchangeurICS exch;
 
+    /**
+     * Créé un planificateur et initialise les personnes de l'application en lisant tous les fichiers du répertoire "fichiers"
+     */
 	public Planificateur() {
 	    personnes = new LinkedList<>();
         exch = new EchangeurICS();
@@ -62,6 +65,14 @@ public class Planificateur {
 		return personnesResultat;
 	}
 
+    /**
+     * Cette méthode permet de récuperer la liste de Possibilite pour la planification d'une réunion
+     * @param personnes la liste des personnes devant participer à la réunion
+     * @param duree la duree de la réunion
+     * @param debutPlage le debut de la plage dans laquelle la réunion doit avoir lieu
+     * @param finPlage la fin de la plage dans laquelle la réunion doit commencer
+     * @return la liste des Possibilite
+     */
 	public ArrayList<Possibilite>
     getPosibilite(LinkedList<Personne> personnes, int duree, LocalDateTime debutPlage, LocalDateTime finPlage ) {
 
@@ -106,11 +117,26 @@ public class Planificateur {
         return possibilites;
     }
 
+    /**
+     * Méthode pour vérifier que tous les paramètre utilisé à la méthode getPossibilite sont correct
+     * @param personnes la liste de personnes qui participent à la réunion (ne dois pas être vide)
+     * @param duree la duree de la réunion (doit être supérieur à 0 et modulo 15 et inférieur à 4h)
+     * @param debutPlage le debut de la plage dans laquelle la réunion doit commencer (ne doit pas être null
+     *                   et doit être entre 8h et 20h moins la duree)
+     * @param finPlage la fin de la plage dans laquelle la réunion doit commencer (doit etre après le debut et entre 8h et 20h moins la duree)
+     * @return true si les parametre sont correct
+     */
     private boolean correctParam(LinkedList<Personne> personnes, int duree, LocalDateTime debutPlage, LocalDateTime finPlage) {
         //TODO verif param
         return true;
     }
 
+    /**
+     * Méthode pour incrementer une date de 15min et passer au jour suivant si la date depasse 20h moins la durée
+     * @param date la date à incrementer
+     * @param duree la durée de la réunion
+     * @return la nouvelle date calculé
+     */
     private LocalDateTime incrementDate(LocalDateTime date, int duree) {
         LocalTime time = LocalTime.of(20,00);
         int heures = (int)(duree / 60);
@@ -129,8 +155,8 @@ public class Planificateur {
     }
 
 	/**
-	 *
-	 * @param nomFichier
+	 * Méthode pour ajouter une personne à l'application avec ses événement
+	 * @param nomFichier le fichier ics des événement de la personne
 	 */
 	public void addPersonne(String nomFichier) {
 
@@ -144,7 +170,7 @@ public class Planificateur {
 
     /**
      *
-     * @return
+     * @return la liste des personnes
      */
     public LinkedList<Personne> getPersonnes() {
         return personnes;
