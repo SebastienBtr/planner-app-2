@@ -35,7 +35,7 @@ public class PlannerFrame extends JFrame{
         rightPanel();
 
         this.setExtendedState(JFrame.MAXIMIZED_BOTH);
-        this.setUndecorated(true);
+        //this.setUndecorated(true);
         this.setVisible(true);
         //this.setPreferredSize(new Dimension(500,500));
         //this.setResizable(false);
@@ -235,6 +235,10 @@ public class PlannerFrame extends JFrame{
             lesCases[i][0].setText(heure+":00");
             lesCases[i][0].setHorizontalAlignment(JLabel.RIGHT);
             heure++;
+
+            for (int j = 1; j < 6; j++) {
+                lesCases[i][j].setBorder(BorderFactory.createMatteBorder(1, 0, 0, 1, Color.BLACK));
+            }
         }
 
         lesCases[0][1].setText("Lundi");
