@@ -1,10 +1,12 @@
 # planner-app
 
-Projet Java de planification de réunion.
+Projet Java de planification de réunion partie 2.
 
 ## Objectif
 
 Le but du projet est de réaliser un outil d'aide à la détermination des créneaux propices à une réunion connaissant la liste des participants et leurs emplois du temps.
+
+Il s'agit de la deuxième partie du projet (finalisation des fonctionnalités et ajout d'une IHM) réalisé avec la partie 1 du projet réalisé par une autre personne (équivalent à l'autre dépot planner-app).
 
 ## Documentation
 
